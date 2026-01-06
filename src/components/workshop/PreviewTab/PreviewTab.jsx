@@ -29,8 +29,16 @@ export function PreviewTab({ component, platform = 'web' }) {
       }
     });
     // Set default children for button
-    if (component.id === 'button') {
+    if (component.id === 'tds-text-button') {
       defaults.children = 'Button';
+    }
+    // Set default value for ToggleTabBar
+    if (component.id === 'toggle-tab-bar') {
+      defaults.value = 'web';
+      defaults.options = [
+        { value: 'web', label: 'Web' },
+        { value: 'app', label: 'App' },
+      ];
     }
     return defaults;
   });
@@ -45,38 +53,55 @@ export function PreviewTab({ component, platform = 'web' }) {
     );
   }
 
-  // Render interactive components for button variants (primary, secondary, tertiary)
-  const interactiveComponents = useMemo(() => {
-    if (!component?.renderPreview || component.id !== 'button') {
-      // For non-button components, render single interactive example
-      if (!component?.renderPreview) return null;
-      const mockVariant = {
-        name: 'Interactive Example',
-        props: { ...interactiveProps }
-      };
-      return component.renderPreview(mockVariant);
-    }
-    
-    // For button component, render all three variants side by side
-    const variants = ['primary', 'secondary', 'tertiary'];
-    return variants.map(variant => {
-      const mockVariant = {
-        name: 'Interactive Example',
-        props: { ...interactiveProps, variant }
-      };
-      return {
-        variant,
-        element: component.renderPreview(mockVariant)
-      };
-    });
-  }, [component, interactiveProps]);
-
   const handlePropertyChange = (propertyName, value) => {
     setInteractiveProps(prev => ({
       ...prev,
       [propertyName]: value
     }));
   };
+
+  // Render interactive components for button variants (primary, secondary, tertiary)
+  const interactiveComponents = useMemo(() => {
+    if (!component?.renderPreview) return null;
+    
+    // For button component, render all three variants side by side
+    if (component.id === 'tds-text-button') {
+      const variants = ['primary', 'secondary', 'tertiary'];
+      return variants.map(variant => {
+        const mockVariant = {
+          name: 'Interactive Example',
+          props: { ...interactiveProps, variant }
+        };
+        return {
+          variant,
+          element: component.renderPreview(mockVariant, interactiveProps)
+        };
+      });
+    }
+    
+    // For ToggleTabBar, make it fully interactive
+    if (component.id === 'toggle-tab-bar') {
+      const mockVariant = {
+        name: 'Interactive Example',
+        props: {}
+      };
+      // Pass onChange handler to update state
+      const propsWithHandler = {
+        ...interactiveProps,
+        onChange: (value) => {
+          handlePropertyChange('value', value);
+        }
+      };
+      return component.renderPreview(mockVariant, propsWithHandler);
+    }
+    
+    // For other components, render single interactive example
+    const mockVariant = {
+      name: 'Interactive Example',
+      props: { ...interactiveProps }
+    };
+    return component.renderPreview(mockVariant, interactiveProps);
+  }, [component, interactiveProps, handlePropertyChange]);
 
   return (
     <div className="tds-preview-tab" data-node-id="8164:14123">

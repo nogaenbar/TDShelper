@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './ToggleTabBar.css';
+import './ToggleTab.css';
+import { ToggleTab } from './ToggleTab';
 
 /**
  * ToggleTabBar Component
@@ -7,36 +9,65 @@ import './ToggleTabBar.css';
  * Pixel-perfect from Figma design 3968:532312
  * 
  * Uses exact tokens from Token Studio:
- * - height: tds.dimension.element.height.2_5x
- * - horizontalPadding: tds.spacing.container.0_75x
- * - borderRadius: tds.borderRadius.focus.pill
- * - typography: tds.typography.label.semibold.sm
- * - colors: tds.color.element.selectedPrimary / tertiary (default/hover/active)
+ * - Container: white background, 4px gap/padding, 384px border radius, subtle elevation
+ * - Tab: 40px height, 12px/8px padding, 384px border radius
+ * - Typography: 16px semibold, normal letter spacing
+ * - Colors: selectedPrimary (default/hover/active) for selected, tertiary for unselected
  */
 export function ToggleTabBar({ value, onChange, options = [] }) {
+  // Find the index of the selected tab for slide animation
+  const selectedIndex = options.findIndex(opt => opt.value === value);
+  const containerRef = useRef(null);
+  const tabRefs = useRef([]);
+  const [sliderStyle, setSliderStyle] = useState({});
+  
+  useEffect(() => {
+    if (containerRef.current && tabRefs.current[selectedIndex] && selectedIndex >= 0) {
+      const container = containerRef.current;
+      const selectedTab = tabRefs.current[selectedIndex];
+      const containerRect = container.getBoundingClientRect();
+      const tabRect = selectedTab.getBoundingClientRect();
+      
+      // Calculate slider position and width based on actual tab dimensions
+      const leftOffset = tabRect.left - containerRect.left;
+      const width = tabRect.width;
+      
+      setSliderStyle({
+        '--selected-index': selectedIndex,
+        '--total-tabs': options.length || 1,
+        '--slider-left': `${leftOffset}px`,
+        '--slider-width': `${width}px`
+      });
+    }
+  }, [selectedIndex, options.length]);
+  
   return (
     <div className="tds-toggle-tab-bar">
-      <div className="tds-toggle-tab-bar__container">
-        {options.map((option) => {
+      <div ref={containerRef} className="tds-toggle-tab-bar__container">
+        {options.map((option, index) => {
           const isSelected = value === option.value;
           return (
-            <button
+            <ToggleTab
               key={option.value}
-              className={`tds-toggle-tab-bar__tab ${
-                isSelected ? 'tds-toggle-tab-bar__tab--selected' : ''
-              }`}
+              ref={(el) => (tabRefs.current[index] = el)}
+              value={option.value}
+              label={option.label}
+              isSelected={isSelected}
               onClick={() => onChange?.(option.value)}
-              aria-selected={isSelected}
-              aria-label={option.label}
-            >
-              {option.label}
-            </button>
+            />
           );
         })}
+        {/* Sliding background indicator - placed after tabs for proper z-index stacking */}
+        <div 
+          className="tds-toggle-tab-bar__slider"
+          style={sliderStyle}
+        />
       </div>
     </div>
   );
 }
 
-export default ToggleTabBar;
+// Export ToggleTab as a static property for composition
+ToggleTabBar.ToggleTab = ToggleTab;
 
+export default ToggleTabBar;

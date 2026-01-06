@@ -1,0 +1,11 @@
+/**
+ * Tab Component Styles
+ * Child component styles for TdsTabBar
+ * All values use tokens from variables.css - no magic numbers
+ */
+
+.tds-tab-bar__tab {
+  /* Styles will be defined in TdsTabBar.css */
+  /* This file exists for future Tab-specific overrides if needed */
+}
+

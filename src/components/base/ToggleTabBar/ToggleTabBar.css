@@ -1,89 +1,142 @@
 /**
- * ToggleTabBar Component Styles  
+ * ToggleTabBar Component Styles
  * PIXEL-PERFECT from Figma design 3968:532312
  * 
  * Using exact tokens from Token Studio:
- * - height: tds.dimension.element.height.2-5x
- * - horizontalPadding: tds.spacing.container.0-75x
- * - borderRadius: tds.borderRadius.focus.pill
- * - typography: tds.typography.label.semibold.sm
- * 
- * States:
- * - Selected: tds.color.element.selectedPrimary (default/hover/active)
- * - Unselected: tds.color.element.tertiary (default/hover/active)
+ * - Container: white background, 4px gap/padding, 384px border radius, subtle elevation
+ * - Tab: 40px height, 12px horizontal / 8px vertical padding, 384px border radius
+ * - Typography: 16px semibold, normal letter spacing (auto)
+ * - Colors: selectedPrimary (default/hover/active) for selected, tertiary for unselected
  */
 
 .tds-toggle-tab-bar {
+  /* Container background: white */
   background-color: var(--tds-color-background-surface-medium);
+  
+  /* Container border radius: 384px (pill) */
   border-radius: var(--tds-border-radius-focus-pill);
-  box-shadow: var(--tds-elevation-subtle);
+  
+  /* Box shadow: constructed from elevation-subtle composite token */
+  /* Shadow 1: 0px 0px 12px 0px rgba(0,0,0,0.12) */
+  /* Shadow 2: 0px 0px 1px 0px rgba(0,0,0,0.08) */
+  box-shadow: 
+    var(--tds-elevation-subtle-1-offset-x) 
+    var(--tds-elevation-subtle-1-offset-y) 
+    var(--tds-elevation-subtle-1-blur) 
+    var(--tds-elevation-subtle-1-spread) 
+    var(--tds-elevation-subtle-1-color),
+    var(--tds-elevation-subtle-2-offset-x) 
+    var(--tds-elevation-subtle-2-offset-y) 
+    var(--tds-elevation-subtle-2-blur) 
+    var(--tds-elevation-subtle-2-spread) 
+    var(--tds-elevation-subtle-2-color);
+  
   flex-shrink: 0;
 }
 
 .tds-toggle-tab-bar__container {
   display: flex;
-  gap: var(--tds-spacing-container-0-25x); /* 4px gap between tabs */
-  padding: var(--tds-spacing-container-0-25x); /* 4px container padding */
+  position: relative;
+  /* Gap between tabs: 4px */
+  gap: var(--tds-spacing-container-0-25x);
+  /* Container padding: 4px */
+  padding: var(--tds-spacing-container-0-25x);
+}
+
+/* Sliding background indicator */
+.tds-toggle-tab-bar__slider {
+  position: absolute;
+  top: var(--tds-spacing-container-0-25x);
+  height: var(--tds-dimension-element-height-2-5x); /* 40px */
+  border-radius: var(--tds-border-radius-focus-pill); /* 384px */
+  background-color: var(--tds-color-element-selected-primary-default);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+  
+  /* Use calculated values from JavaScript when available, fallback to CSS calc */
+  left: var(--slider-left, var(--tds-spacing-container-0-25x));
+  width: var(--slider-width, calc((100% - var(--tds-spacing-container-0-25x) * 2 - var(--tds-spacing-container-0-25x) * (var(--total-tabs) - 1)) / var(--total-tabs)));
 }
 
 .tds-toggle-tab-bar__tab {
   /* Dimensions from Token Studio */
-  height: var(--tds-dimension-element-height-2-5x);
+  height: var(--tds-dimension-element-height-2-5x); /* 40px */
   padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-75x); /* 8px vertical, 12px horizontal */
-  border-radius: var(--tds-border-radius-focus-pill);
+  border-radius: var(--tds-border-radius-focus-pill); /* 384px */
   border: none;
   
   /* Typography from Token Studio */
   font-family: var(--tds-typography-label-semibold-sm-font-family);
   font-weight: var(--tds-typography-label-semibold-sm-font-weight);
   font-size: var(--tds-typography-label-semibold-sm-font-size);
-  line-height: normal; /* Override line-height for exact match */
-  letter-spacing: var(--tds-core-font-letterSpacing-negative);
+  line-height: normal;
+  /* Letter spacing: normal (auto) - not tokenized in our token set */
+  letter-spacing: normal;
   
   /* Base state - Unselected (tertiary) */
-  /* Note: tertiary-default token resolves to black, but for unselected tabs we want transparent */
-  background-color: transparent;
-  color: var(--tds-color-element-tertiary-onTertiary);
+  background-color: transparent; /* Transparent to show slider behind */
+  color: var(--tds-color-element-tertiary-on-tertiary); /* #333333 */
   
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  flex-shrink: 0;
+  
+  /* Position relative for z-index stacking */
+  position: relative;
+  z-index: 1;
+  
+  /* Animation: smooth transitions for best practice */
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s ease-in-out;
+  
+  /* Ensure tabs take equal width for slider calculation */
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 /* Selected state - Default */
 .tds-toggle-tab-bar__tab--selected {
-  background-color: var(--tds-color-element-selectedPrimary-default);
-  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+  /* Background is handled by slider, so keep transparent */
+  background-color: transparent;
+  color: var(--tds-color-element-selected-primary-on-selected-primary); /* #d2000f */
 }
 
 /* Selected state - Hover */
 .tds-toggle-tab-bar__tab--selected:hover {
-  background-color: var(--tds-color-element-selectedPrimary-hover);
-  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+  color: var(--tds-color-element-selected-primary-on-selected-primary); /* #d2000f */
+}
+
+/* Update slider background on hover of selected tab */
+.tds-toggle-tab-bar__tab--selected:hover ~ .tds-toggle-tab-bar__slider {
+  background-color: var(--tds-color-element-selected-primary-hover); /* rgba(245,204,204,0.84) */
 }
 
 /* Selected state - Active */
 .tds-toggle-tab-bar__tab--selected:active {
-  background-color: var(--tds-color-element-selectedPrimary-active);
-  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+  color: var(--tds-color-element-selected-primary-on-selected-primary); /* #d2000f */
+  transform: scale(0.98); /* Subtle press animation */
+}
+
+/* Update slider background on active state of selected tab */
+.tds-toggle-tab-bar__container:active .tds-toggle-tab-bar__tab--selected:active ~ .tds-toggle-tab-bar__slider {
+  background-color: var(--tds-color-element-selected-primary-active); /* rgba(240,143,146,0.72) */
 }
 
 /* Unselected state - Hover */
 .tds-toggle-tab-bar__tab:not(.tds-toggle-tab-bar__tab--selected):hover {
-  background-color: var(--tds-color-element-tertiary-hover);
-  color: var(--tds-color-element-tertiary-onTertiary);
+  background-color: var(--tds-color-element-tertiary-hover); /* rgba(143,143,143,0.12) */
+  color: var(--tds-color-element-tertiary-on-tertiary); /* #333333 */
 }
 
 /* Unselected state - Active */
 .tds-toggle-tab-bar__tab:not(.tds-toggle-tab-bar__tab--selected):active {
-  background-color: var(--tds-color-element-tertiary-active);
-  color: var(--tds-color-element-tertiary-onTertiary);
+  background-color: var(--tds-color-element-tertiary-active); /* rgba(143,143,143,0.24) */
+  color: var(--tds-color-element-tertiary-on-tertiary); /* #333333 */
+  transform: scale(0.98); /* Subtle press animation */
 }
 
 .tds-toggle-tab-bar__tab:focus-visible {
   outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
   outline-offset: var(--tds-border-width-base-m);
+  border-radius: var(--tds-border-radius-focus-0-81x);
 }
-

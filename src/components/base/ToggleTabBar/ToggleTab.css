@@ -1,0 +1,11 @@
+/**
+ * ToggleTab Component Styles
+ * Child component styles for TdsToggleTabBar
+ * All values use tokens from variables.css - no magic numbers
+ */
+
+.tds-toggle-tab-bar__tab {
+  /* Styles are defined in ToggleTabBar.css */
+  /* This file exists for future ToggleTab-specific overrides if needed */
+}
+

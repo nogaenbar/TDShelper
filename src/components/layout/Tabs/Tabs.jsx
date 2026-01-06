@@ -1,6 +1,6 @@
 import React from 'react';
 import './Tabs.css';
-import { TabBar } from '../../base/TabBar';
+import { TdsTabBar } from '../../base/TdsTabBar';
 import { PreviewTab } from '../../workshop/PreviewTab';
 import { CodeView } from '../../workshop/CodeView';
 import { AccessibilityTab } from '../../workshop/AccessibilityTab';
@@ -34,7 +34,7 @@ export function Tabs({ activeTab, onTabChange, component, platform }) {
     <div className="tds-tabs">
       {/* Tab Bar */}
       <div className="tds-tabs__bar-container">
-        <TabBar
+        <TdsTabBar
           tabs={tabs}
           activeTab={activeTab}
           onTabChange={onTabChange}

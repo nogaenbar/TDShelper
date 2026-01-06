@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.css';
+import './TdsTextButton.css';
 
 /**
- * Button Component
+ * TdsTextButton Component
  * 
  * Token-driven button component following system-first principles.
  * All styling uses tokens from variables.css - no magic numbers.
@@ -19,7 +19,7 @@ import './Button.css';
  * @param {string} props.type - Button type: 'button' | 'submit' | 'reset'
  * @param {string} props.className - Additional CSS classes
  */
-export function Button({
+export function TdsTextButton({
   variant = 'primary',
   size = 'medium',
   disabled = false,
@@ -32,7 +32,7 @@ export function Button({
   className = '',
   ...props
 }) {
-  const baseClass = 'tds-button';
+  const baseClass = 'tds-text-button';
   const variantClass = `${baseClass}--${variant}`;
   const sizeClass = `${baseClass}--${size}`;
   const stateClass = disabled 
@@ -57,7 +57,7 @@ export function Button({
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${baseClass}__icon ${baseClass}__icon--${iconPosition}`}
+      className={`${baseClass}__icon ${baseClass}__icon--${iconPosition || 'right'}`}
       aria-hidden="true"
     >
       <rect x="2" y="2" width="12" height="12" stroke="currentColor" strokeWidth="1.5" fill="none" />
@@ -85,5 +85,5 @@ export function Button({
   );
 }
 
-export default Button;
+export default TdsTextButton;
 

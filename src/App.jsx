@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Sidebar } from './components/layout/Sidebar';
 import { MainContent } from './components/layout/MainContent';
-import { Button } from './components/base/Button';
+import { TdsTextButton } from './components/base/TdsTextButton';
 import { ToggleTabBar } from './components/base/ToggleTabBar';
 
 /**
@@ -10,11 +10,13 @@ import { ToggleTabBar } from './components/base/ToggleTabBar';
  * Main application component
  */
 function App() {
-  // Mock component data - in production, this would come from a data source
-  const components = [
+  // Mock component data - organized by component type
+  // Base Components: Public building blocks with child components
+  const baseComponents = [
     {
-      id: 'button',
-      name: 'Button',
+      id: 'tds-text-button',
+      name: 'TdsTextButton',
+      category: 'base',
       description: 'Primary interactive button component with multiple sizes, states, and icon support',
       platform: 'web',
       variants: [
@@ -136,24 +138,24 @@ function App() {
         // Let natural hover/active states work
         if (variant.name === 'Interactive Example') {
           return (
-            <Button {...buttonProps}>
+            <TdsTextButton {...buttonProps}>
               {buttonLabel}
-            </Button>
+            </TdsTextButton>
           );
         }
         
         // For variant previews, simulate states if needed
         const state = props.state || 'default';
-        const stateClass = state !== 'default' ? `tds-button--preview-${state}` : '';
+        const stateClass = state !== 'default' ? `tds-text-button--preview-${state}` : '';
         const wrapperClassName = stateClass 
-          ? `tds-button-preview-wrapper ${stateClass}` 
-          : 'tds-button-preview-wrapper';
+          ? `tds-text-button-preview-wrapper ${stateClass}` 
+          : 'tds-text-button-preview-wrapper';
         
         return (
           <div className={wrapperClassName}>
-            <Button {...buttonProps}>
+            <TdsTextButton {...buttonProps}>
               {variant.name.includes('Icon') ? 'Label' : 'Button'}
-            </Button>
+            </TdsTextButton>
           </div>
         );
       },
@@ -166,31 +168,9 @@ function App() {
       },
     },
     {
-      id: 'badge',
-      name: 'Badge',
-      description: 'Small label component for categorization and status',
-      platform: 'web',
-      variants: [],
-      properties: [
-        {
-          name: 'variant',
-          type: "'info' | 'success' | 'warning' | 'error'",
-          default: "'info'",
-          description: 'The purpose/semantic variant of the badge',
-        },
-      ],
-    },
-    {
-      id: 'tab-bar',
-      name: 'Tab Bar',
-      description: 'Horizontal navigation component for tab switching',
-      platform: 'web',
-      variants: [],
-      properties: [],
-    },
-    {
       id: 'toggle-tab-bar',
-      name: 'Toggle Tab Bar',
+      name: 'ToggleTabBar',
+      category: 'base',
       description: 'Pill-style toggle component for binary options (e.g., Web/App)',
       platform: 'web',
       variants: [
@@ -227,17 +207,35 @@ function App() {
           description: 'Array of options to display in the toggle bar',
         },
       ],
-      renderPreview: (variant) => {
-        const isSelected = variant.props?.selected ?? true;
-        const state = variant.props?.state || 'default';
+      renderPreview: (variant, interactiveProps = {}) => {
+        // For interactive example, use interactiveProps if available
+        const value = interactiveProps.value !== undefined 
+          ? interactiveProps.value 
+          : (variant.props?.selected ? 'web' : 'app');
         
         const options = [
           { value: 'web', label: 'Web' },
           { value: 'app', label: 'App' },
         ];
         
-        // For preview, we'll render a single tab button to show the state
-        // The full ToggleTabBar will show in the default state
+        // For interactive example, use the onChange from interactiveProps
+        const onChange = interactiveProps.onChange || (() => {});
+        
+        // If this is an interactive example (no state prop), render fully interactive
+        if (!variant.props?.state || variant.name === 'Interactive Example') {
+          return (
+            <ToggleTabBar
+              value={value}
+              onChange={onChange}
+              options={options}
+            />
+          );
+        }
+        
+        // For variant previews with states, render static preview
+        const isSelected = variant.props?.selected ?? true;
+        const state = variant.props?.state || 'default';
+        
         if (state === 'default') {
           return (
             <ToggleTabBar
@@ -279,6 +277,15 @@ function App() {
     },
   ];
 
+  // Pattern Components: Higher-level, opinionated assemblies
+  const patternComponents = [];
+
+  // Subcomponents: Internal parts for implementation
+  const subcomponents = [];
+
+  // Combine all components for backward compatibility
+  const components = [...baseComponents, ...patternComponents, ...subcomponents];
+
   const [selectedComponent, setSelectedComponent] = useState(components[0]);
   const [platform, setPlatform] = useState('web');
   const [activeTab, setActiveTab] = useState('preview');
@@ -313,4 +320,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import { Button } from '../../base/Button';
+// Button import removed - not used in Sidebar
 import { ComponentList } from '../../workshop/ComponentList';
 
 /**
@@ -27,7 +27,7 @@ export function Sidebar({
         <div className="tds-sidebar__header-content">
           <h1 className="tds-sidebar__title" data-node-id="8164:14094">Component Workshop</h1>
           <p className="tds-sidebar__description" data-node-id="8164:14096">
-            Build production-ready components for your design system
+            Build production-ready components for TDS design system
           </p>
         </div>
       </div>

@@ -58,3 +58,23 @@
   display: block;
 }
 
+.tds-component-list__header {
+  padding: var(--tds-spacing-container-0-75x) var(--tds-spacing-container-0-75x) var(--tds-spacing-container-0-5x);
+  margin-top: var(--tds-spacing-container-1x);
+}
+
+.tds-component-list__header:first-child {
+  margin-top: 0;
+}
+
+.tds-component-list__header-text {
+  display: block;
+  color: var(--tds-color-foreground-subtle);
+  font-family: var(--tds-typography-label-medium-xs-font-family);
+  font-weight: var(--tds-typography-label-medium-xs-font-weight);
+  font-size: var(--tds-typography-label-medium-xs-font-size);
+  line-height: var(--tds-typography-label-medium-xs-line-height);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+

@@ -119,7 +119,74 @@ Always use ONLY the set of tokens from the variables.css file.
 
 ⸻
 
-4. Layout & Breakpoints
+## 4. Component Architecture
+
+TDS follows a three-tier component architecture to organize building blocks, patterns, and internals:
+
+### 4.1 Base Components (with Child Components)
+
+**What it is:** A single component that owns structure + behavior, and exposes slot-like children for composition.
+
+**Purpose:** Flexible composition without exploding the component inventory.
+
+**API shape:** Parent + "child" parts that are still conceptually inside the parent.
+
+**Examples:**
+- `TdsTextButton` - Button component with icon support
+- `TdsTabBar` with `.Tab` child component
+- `TdsCheckbox` with `.CheckboxControl` child component
+
+**Key idea:** The parent is the "system"; the children are expected regions of that system.
+
+**Documentation:** Document fully (props, component source, accessibility, examples, etc.)
+
+### 4.2 Pattern Components
+
+**What it is:** A higher-level, opinionated assembly of base components to solve a recurring product problem. These also have child components.
+
+**Purpose:** Consistency + speed for common flows; "recommended recipe."
+
+**API shape:** Often fewer knobs, stronger defaults, and rules about layout/content.
+
+**Typical examples from TDS:**
+- `TdsAccordion` with `.AccordionCollapsible`, `.AccordionElement`, and `.AccordionHeader`
+- `TdsActionCard` with `.ActionCardHeader`, `.ActionCardContent`
+
+**Key idea:** Patterns encode product UX decisions, not just UI primitives. They may be more domain-aware and can change more often than base components.
+
+**Documentation:** Document fully and also when to use, props, component source, accessibility, examples, do/don't, variations, and copy/layout guidance.
+
+### 4.3 Subcomponents
+
+**What it is:** Internal parts of a component that exist for implementation and styling structure, but are not meant to be used freely outside that component (or only in tightly controlled ways).
+
+**Purpose:** Keep internals maintainable and consistent without expanding the public API.
+
+**API shape:** Not exported, or exported but explicitly labeled "internal/advanced."
+
+**Typical examples in TDS:**
+- `ContentTile` - meant to be used inside cards, etc.
+- `FilterTag` - meant to be used in `TdsFilterList`
+
+**Key idea:** Subcomponents are about how the component is built, not what the design system is encouraging product teams to compose directly.
+
+**Documentation:** Document in an "Advanced" section with warnings.
+
+### 4.4 Component Naming Convention
+
+**CRITICAL:** Component names must match Figma exactly:
+- ✅ `TdsTextButton` (matches Figma)
+- ✅ `TdsTabBar` with `.Tab` subcomponent (matches Figma)
+- ❌ `Button` or `TextButton` (doesn't match Figma)
+
+**Sidebar Organization:** Components are organized in the sidebar by category:
+- **Base Components** section header
+- **Pattern Components** section header  
+- **Subcomponents** section header
+
+⸻
+
+## 5. Layout & Breakpoints
 
 4.1 Breakpoints
 
@@ -142,14 +209,14 @@ Avoid unnecessary nesting and fragile layouts.
 
 ⸻
 
-5. Interaction Principles
+## 6. Interaction Principles
 	•	Explicit states: default, hover, focus, active, disabled, loading, empty, error, success.
 	•	Consistent patterns for: selection, editing, confirmations, destructive actions, inline validation.
 	•	Reduce cognitive load: clear grouping, predictable patterns, minimal configuration fatigue.
 
 ⸻
 
-6. Code Quality & Structure
+## 7. Code Quality & Structure
 
 6.1 General
 	•	Code must be structured, modular, and optimized.
@@ -167,7 +234,7 @@ Use a layered approach:
 	•	All component styles reference tokens.
 ⸻
 
-7. Accessibility & Usability
+## 8. Accessibility & Usability
 	•	Text and key UI elements must meet WCAG AA contrast or better.
 	•	Provide clear, visible focus states for all interactive elements.
 	•	Maintain generous hit areas (≈ 40px) for primary interactive controls.
@@ -175,7 +242,7 @@ Use a layered approach:
 
 ⸻
 
-8. Response & Output Format
+## 9. Response & Output Format
 
 When answering any request:
 	1.	Brief plan (max 5–8 lines)
@@ -193,7 +260,7 @@ state the decision in one short sentence and then implement it.
 
 ⸻
 
-9. Behavioral Constraints
+## 10. Behavioral Constraints
 	•	Be precise, minimal, and unambiguous.
 	•	Never ignore the defined design system.
 	•	Never emit inconsistent tokens or conflicting breakpoints.
