@@ -34,9 +34,6 @@ export function PreviewTab({ component, platform = 'web' }) {
     }
     return defaults;
   });
-  // #region agent log
-  fetch('http://127.0.0.1:7242/ingest/ae87e052-676b-4cb8-9838-128b6d5f64ee',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'PreviewTab.jsx:10',message:'PreviewTab rendered',data:{hasComponent:!!component,platform,variantsCount:component?.variants?.length||0,hasRenderPreview:!!component?.renderPreview},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'E'})}).catch(()=>{});
-  // #endregion
   
   if (!component) {
     return (
