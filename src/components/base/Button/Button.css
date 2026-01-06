@@ -143,16 +143,14 @@
 
 .tds-button--tertiary:hover:not(:disabled) {
   background-color: var(--tds-color-element-tertiary-hover);
-  border-width: var(--tds-border-width-base-s);
-  border-style: solid;
-  border-color: var(--tds-color-border-subtle);
+  /* Keep border: none for hover state */
+  border: none;
 }
 
 .tds-button--tertiary:active:not(:disabled) {
   background-color: var(--tds-color-element-tertiary-active);
-  border-width: var(--tds-border-width-base-s);
-  border-style: solid;
-  border-color: var(--tds-color-border-medium);
+  /* Keep border: none for active state */
+  border: none;
 }
 
 /* Tertiary Disabled: fill tertiary.default, border transparent */
