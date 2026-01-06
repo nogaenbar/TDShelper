@@ -37,7 +37,6 @@
 .tds-button--small {
   min-height: var(--tds-dimension-element-height-2x);
   padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-63x);
-  gap: var(--tds-spacing-container-0-37x);
   border-radius: var(--tds-border-radius-container-0-63x);
   font-size: var(--tds-typography-label-semibold-s-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-s-font-weight);
@@ -48,7 +47,6 @@
 .tds-button--medium {
   min-height: var(--tds-dimension-element-height-2-5x);
   padding: var(--tds-spacing-container-0-63x) var(--tds-spacing-container-1x);
-  gap: var(--tds-spacing-container-0-5x);
   border-radius: var(--tds-border-radius-container-0-75x);
   font-size: var(--tds-typography-label-semibold-sm-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-sm-font-weight);
@@ -59,7 +57,6 @@
 .tds-button--large {
   min-height: var(--tds-dimension-element-height-3-25x);
   padding: var(--tds-spacing-container-0-88x) var(--tds-spacing-container-1-5x);
-  gap: var(--tds-spacing-container-0-63x);
   border-radius: var(--tds-border-radius-container-1-12x);
   font-size: var(--tds-typography-label-semibold-m-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-m-font-weight);
@@ -188,7 +185,20 @@
 .tds-button__content {
   display: inline-flex;
   align-items: center;
-  /* Gap is handled by parent .tds-button gap property per size */
+  /* Gap between icon and label is set per size below */
+}
+
+/* Gap between icon and label per size */
+.tds-button--small .tds-button__content {
+  gap: var(--tds-spacing-container-0-37x);
+}
+
+.tds-button--medium .tds-button__content {
+  gap: var(--tds-spacing-container-0-5x);
+}
+
+.tds-button--large .tds-button__content {
+  gap: var(--tds-spacing-container-0-63x);
 }
 
 .tds-button__icon {
