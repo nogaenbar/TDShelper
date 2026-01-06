@@ -62,14 +62,3 @@
   overflow-y: auto;
 }
 
-/* Footer with New Component button - 73px height */
-.tds-sidebar__new-component-action {
-  border-top: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
-  padding: calc(var(--tds-spacing-container-1x) + var(--tds-spacing-container-0-25x)) var(--tds-spacing-container-1x) 0; /* 17px 16px 0 */
-  flex-shrink: 0;
-}
-
-.tds-sidebar__new-component-action .tds-button {
-  width: 100%;
-}
-
