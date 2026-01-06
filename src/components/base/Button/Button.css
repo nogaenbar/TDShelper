@@ -1,6 +1,7 @@
 /**
  * Button Component Styles
  * All values use tokens from variables.css - no magic numbers
+ * Pixel-perfect implementation from Figma designs
  */
 
 .tds-button {
@@ -16,8 +17,10 @@
   text-decoration: var(--tds-core-textDecoration-none);
   text-transform: var(--tds-core-textCase-none);
   
-  /* Border using composite token from Figma */
-  border: var(--tds-border-action-transparent-width) var(--tds-border-action-transparent-style) var(--tds-border-action-transparent-color);
+  /* Default border - will be overridden by variant styles */
+  border-width: var(--tds-border-action-transparent-width);
+  border-style: var(--tds-border-action-transparent-style);
+  border-color: var(--tds-border-action-transparent-color);
   
   cursor: pointer;
   transition: all 0.2s ease;
@@ -27,11 +30,11 @@
   -webkit-appearance: none;
 }
 
-/* Button Sizes - Using exact Figma tokens */
-/* Higher specificity to ensure size overrides base font-size */
+/* ========== Button Sizes - Using exact Figma tokens ========== */
+
+/* Small: minHeight 2x, vertical 0.5x, horizontal 0.63x, gap 0.37x, radius 0.63x */
 .tds-button.tds-button--small,
 .tds-button--small {
-  /* Figma tokens for small size */
   min-height: var(--tds-dimension-element-height-2x);
   padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-63x);
   gap: var(--tds-spacing-container-0-37x);
@@ -40,9 +43,9 @@
   font-weight: var(--tds-typography-label-semibold-s-font-weight);
 }
 
+/* Medium: minHeight 2.5x, vertical 0.63x, horizontal 1x, gap 0.5x, radius 0.75x */
 .tds-button.tds-button--medium,
 .tds-button--medium {
-  /* Figma tokens for medium size */
   min-height: var(--tds-dimension-element-height-2-5x);
   padding: var(--tds-spacing-container-0-63x) var(--tds-spacing-container-1x);
   gap: var(--tds-spacing-container-0-5x);
@@ -51,9 +54,9 @@
   font-weight: var(--tds-typography-label-semibold-sm-font-weight);
 }
 
+/* Large: minHeight 3.25x, vertical 0.88x, horizontal 1.5x, gap 0.63x, radius 1.12x */
 .tds-button.tds-button--large,
 .tds-button--large {
-  /* Figma tokens for large size */
   min-height: var(--tds-dimension-element-height-3-25x);
   padding: var(--tds-spacing-container-0-88x) var(--tds-spacing-container-1-5x);
   gap: var(--tds-spacing-container-0-63x);
@@ -62,10 +65,15 @@
   font-weight: var(--tds-typography-label-semibold-m-font-weight);
 }
 
-/* Primary Variant - Using exact Figma tokens */
+/* ========== Primary Variant ========== */
+
 .tds-button--primary {
+  /* fill: tds.color.element.primary.default */
   background-color: var(--tds-color-element-primary-default);
-  color: var(--tds-color-element-primary-onPrimary);
+  /* label fill: tds.color.element.primary.onPrimary */
+  color: var(--tds-color-element-primary-on-primary);
+  /* border: tds.border.action.transparent */
+  border-color: var(--tds-border-action-transparent-color);
   letter-spacing: var(--tds-core-font-letterSpacing-subtle);
 }
 
@@ -83,28 +91,56 @@
   border-radius: var(--tds-border-radius-focus-0-81x);
 }
 
-/* Secondary Variant */
+/* Primary Disabled: fill disabled.default, border transparent */
+.tds-button--primary.tds-button--disabled,
+.tds-button--primary:disabled {
+  background-color: var(--tds-color-element-disabled-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border-color: var(--tds-border-action-transparent-color);
+  cursor: not-allowed;
+}
+
+/* ========== Secondary Variant ========== */
+
 .tds-button--secondary {
+  /* fill: tds.color.element.secondary.default */
   background-color: var(--tds-color-element-secondary-default);
-  color: var(--tds-color-element-secondary-onSecondary);
-  border-color: var(--tds-color-element-secondary-onSecondary);
+  /* label fill: tds.color.element.secondary.onSecondary */
+  color: var(--tds-color-element-secondary-on-secondary);
+  /* border: tds.border.action.brand */
+  border-width: var(--tds-border-action-brand-width);
+  border-style: var(--tds-border-action-brand-style);
+  border-color: var(--tds-border-action-brand-color);
 }
 
 .tds-button--secondary:hover:not(:disabled) {
   background-color: var(--tds-color-element-secondary-hover);
-  border-color: var(--tds-color-element-secondary-hover);
 }
 
 .tds-button--secondary:active:not(:disabled) {
   background-color: var(--tds-color-element-secondary-active);
-  border-color: var(--tds-color-element-secondary-active);
 }
 
-/* Tertiary Variant */
+/* Secondary Disabled: fill secondary.default, border action.disabled */
+.tds-button--secondary.tds-button--disabled,
+.tds-button--secondary:disabled {
+  background-color: var(--tds-color-element-secondary-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border-width: var(--tds-border-action-disabled-width);
+  border-style: var(--tds-border-action-disabled-style);
+  border-color: var(--tds-border-action-disabled-color);
+  cursor: not-allowed;
+}
+
+/* ========== Tertiary Variant ========== */
+
 .tds-button--tertiary {
+  /* fill: tds.color.element.tertiary.default */
   background-color: var(--tds-color-element-tertiary-default);
-  color: var(--tds-color-element-tertiary-onTertiary);
-  border-color: var(--tds-color-border-transparent);
+  /* label fill: tds.color.element.tertiary.onTertiary */
+  color: var(--tds-color-element-tertiary-on-tertiary);
+  /* border: tds.border.action.transparent */
+  border-color: var(--tds-border-action-transparent-color);
 }
 
 .tds-button--tertiary:hover:not(:disabled) {
@@ -117,15 +153,17 @@
   border-color: var(--tds-color-border-medium);
 }
 
-/* Disabled State - Using exact Figma token */
-.tds-button--disabled,
-.tds-button:disabled {
-  background-color: var(--tds-color-element-disabled-default);
-  color: var(--tds-color-element-disabled-onDisabled);
+/* Tertiary Disabled: fill tertiary.default, border transparent */
+.tds-button--tertiary.tds-button--disabled,
+.tds-button--tertiary:disabled {
+  background-color: var(--tds-color-element-tertiary-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border-color: var(--tds-border-action-transparent-color);
   cursor: not-allowed;
 }
 
-/* Loading State */
+/* ========== Loading State ========== */
+
 .tds-button--loading {
   position: relative;
   pointer-events: none;
@@ -190,4 +228,3 @@
 .tds-button--loading .tds-button__content {
   opacity: 0.7;
 }
-
