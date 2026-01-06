@@ -15,8 +15,8 @@
 /* Tab bar header container: white background with border */
 .tds-tabs__bar-container {
   background-color: var(--tds-color-background-surfaceMedium); /* white */
-  border-bottom: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
-  padding: 0 0 var(--tds-borderWidth-base-s) var(--tds-spacing-container-1_5x); /* 0 0 1px 24px */
+  border-bottom: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
+  padding: 0 0 var(--tds-border-width-base-s) var(--tds-spacing-container-1-5x); /* 0 0 1px 24px */
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -26,6 +26,6 @@
 .tds-tabs__content {
   flex: 1;
   overflow-y: auto;
-  padding: var(--tds-spacing-container-1_5x); /* 24px */
+  padding: var(--tds-spacing-container-1-5x); /* 24px */
 }
 

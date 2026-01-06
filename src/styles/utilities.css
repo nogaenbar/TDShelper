@@ -4,16 +4,16 @@
  */
 
 /* Spacing utilities */
-.u-spacing-0_5x {
-  padding: var(--tds-spacing-container-0_5x);
+.u-spacing-0-5x {
+  padding: var(--tds-spacing-container-0-5x);
 }
 
 .u-spacing-1x {
   padding: var(--tds-spacing-container-1x);
 }
 
-.u-spacing-1_5x {
-  padding: var(--tds-spacing-container-1_5x);
+.u-spacing-1-5x {
+  padding: var(--tds-spacing-container-1-5x);
 }
 
 .u-spacing-2x {
@@ -21,8 +21,8 @@
 }
 
 /* Margin utilities */
-.u-margin-0_5x {
-  margin: var(--tds-spacing-container-0_5x);
+.u-margin-0-5x {
+  margin: var(--tds-spacing-container-0-5x);
 }
 
 .u-margin-1x {
@@ -82,18 +82,18 @@
 
 /* Border utilities */
 .u-border-subtle {
-  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+  border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
 }
 
-.u-border-radius-0_5x {
-  border-radius: var(--tds-borderRadius-container-0_5x);
+.u-border-radius-0-5x {
+  border-radius: var(--tds-border-radius-container-0-5x);
 }
 
 .u-border-radius-1x {
-  border-radius: var(--tds-borderRadius-container-1x);
+  border-radius: var(--tds-border-radius-container-1x);
 }
 
 .u-border-radius-pill {
-  border-radius: var(--tds-borderRadius-container-pill);
+  border-radius: var(--tds-border-radius-container-pill);
 }
 

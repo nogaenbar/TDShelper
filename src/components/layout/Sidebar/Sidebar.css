@@ -8,10 +8,10 @@
  */
 
 .tds-sidebar {
-  width: var(--tds-dimension-element-minWidth-20x); /* 320px */
+  width: var(--tds-dimension-element-min-width-20x); /* 320px */
   height: 100vh;
   background-color: var(--tds-color-background-surfaceMedium); /* white */
-  border-right: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
+  border-right: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -19,18 +19,18 @@
 
 /* Header Section - 153px height */
 .tds-sidebar__header {
-  border-bottom: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
-  padding: var(--tds-spacing-container-1_5x); /* 24px */
+  border-bottom: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
+  padding: var(--tds-spacing-container-1-5x); /* 24px */
   display: flex;
   flex-direction: column;
-  gap: var(--tds-spacing-container-0_5x); /* 8px */
+  gap: var(--tds-spacing-container-0-5x); /* 8px */
   flex-shrink: 0;
 }
 
 .tds-sidebar__header-content {
   display: flex;
   flex-direction: column;
-  gap: var(--tds-spacing-container-0_5x);
+  gap: var(--tds-spacing-container-0-5x);
 }
 
 /* Title: "Component Workshop" */
@@ -64,8 +64,8 @@
 
 /* Footer with New Component button - 73px height */
 .tds-sidebar__new-component-action {
-  border-top: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
-  padding: calc(var(--tds-spacing-container-1x) + var(--tds-spacing-container-0_25x)) var(--tds-spacing-container-1x) 0; /* 17px 16px 0 */
+  border-top: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
+  padding: calc(var(--tds-spacing-container-1x) + var(--tds-spacing-container-0-25x)) var(--tds-spacing-container-1x) 0; /* 17px 16px 0 */
   flex-shrink: 0;
 }
 

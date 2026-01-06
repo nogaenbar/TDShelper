@@ -33,9 +33,9 @@
 .tds-button--small {
   /* Figma tokens for small size */
   min-height: var(--tds-dimension-element-height-2x);
-  padding: var(--tds-spacing-container-0_5x) var(--tds-spacing-container-0_63x);
-  gap: var(--tds-spacing-container-0_37x);
-  border-radius: var(--tds-borderRadius-container-0_63x);
+  padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-63x);
+  gap: var(--tds-spacing-container-0-37x);
+  border-radius: var(--tds-border-radius-container-0-63x);
   font-size: var(--tds-typography-label-semibold-s-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-s-font-weight);
 }
@@ -43,10 +43,10 @@
 .tds-button.tds-button--medium,
 .tds-button--medium {
   /* Figma tokens for medium size */
-  min-height: var(--tds-dimension-element-height-2_5x);
-  padding: var(--tds-spacing-container-0_63x) var(--tds-spacing-container-1x);
-  gap: var(--tds-spacing-container-0_5x);
-  border-radius: var(--tds-borderRadius-container-0_75x);
+  min-height: var(--tds-dimension-element-height-2-5x);
+  padding: var(--tds-spacing-container-0-63x) var(--tds-spacing-container-1x);
+  gap: var(--tds-spacing-container-0-5x);
+  border-radius: var(--tds-border-radius-container-0-75x);
   font-size: var(--tds-typography-label-semibold-sm-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-sm-font-weight);
 }
@@ -54,10 +54,10 @@
 .tds-button.tds-button--large,
 .tds-button--large {
   /* Figma tokens for large size */
-  min-height: var(--tds-dimension-element-height-3_25x);
-  padding: var(--tds-spacing-container-0_88x) var(--tds-spacing-container-1_5x);
-  gap: var(--tds-spacing-container-0_63x);
-  border-radius: var(--tds-borderRadius-container-1_12x);
+  min-height: var(--tds-dimension-element-height-3-25x);
+  padding: var(--tds-spacing-container-0-88x) var(--tds-spacing-container-1-5x);
+  gap: var(--tds-spacing-container-0-63x);
+  border-radius: var(--tds-border-radius-container-1-12x);
   font-size: var(--tds-typography-label-semibold-m-font-size) !important;
   font-weight: var(--tds-typography-label-semibold-m-font-weight);
 }
@@ -78,9 +78,9 @@
 }
 
 .tds-button--primary:focus-visible {
-  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
-  outline-offset: var(--tds-borderWidth-base-m);
-  border-radius: var(--tds-borderRadius-focus-0_81x);
+  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-border-width-base-m);
+  border-radius: var(--tds-border-radius-focus-0-81x);
 }
 
 /* Secondary Variant */
@@ -135,9 +135,9 @@
   display: inline-block;
   width: var(--tds-spacing-container-1x);
   height: var(--tds-spacing-container-1x);
-  border: var(--tds-borderWidth-base-m) solid currentColor;
+  border: var(--tds-border-width-base-m) solid currentColor;
   border-right-color: transparent;
-  border-radius: var(--tds-borderRadius-container-pill);
+  border-radius: var(--tds-border-radius-container-pill);
   animation: spin 0.6s linear infinite;
 }
 

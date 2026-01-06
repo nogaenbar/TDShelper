@@ -12,19 +12,19 @@
   font-weight: var(--tds-typography-title-semibold-l-font-weight);
   line-height: var(--tds-typography-title-semibold-l-line-height);
   color: var(--tds-color-foreground-default);
-  margin-bottom: var(--tds-spacing-container-1_5x);
+  margin-bottom: var(--tds-spacing-container-1-5x);
 }
 
 .tds-accessibility-tab__content {
   display: flex;
   flex-direction: column;
-  gap: var(--tds-spacing-container-1_5x);
+  gap: var(--tds-spacing-container-1-5x);
 }
 
 .tds-accessibility-tab__section {
   display: flex;
   flex-direction: column;
-  gap: var(--tds-spacing-container-0_5x);
+  gap: var(--tds-spacing-container-0-5x);
 }
 
 .tds-accessibility-tab__section-title {

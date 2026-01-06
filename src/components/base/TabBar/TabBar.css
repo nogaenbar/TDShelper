@@ -54,12 +54,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--tds-borderWidth-base-m); /* 2px */
+  height: var(--tds-border-width-base-m); /* 2px */
   background-color: var(--tds-color-foreground-brandAccent); /* #F23B44 */
 }
 
 .tds-tab-bar__tab:focus-visible {
-  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
-  outline-offset: var(--tds-borderWidth-base-m);
+  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-border-width-base-m);
 }
 

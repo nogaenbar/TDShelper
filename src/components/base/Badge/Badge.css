@@ -14,9 +14,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: var(--tds-dimension-element-height-1_25x); /* 20px */
-  padding: 0 var(--tds-spacing-container-0_5x); /* 0 8px */
-  border-radius: var(--tds-borderRadius-container-pill); /* 384px */
+  height: var(--tds-dimension-element-height-1-25x); /* 20px */
+  padding: 0 var(--tds-spacing-container-0-5x); /* 0 8px */
+  border-radius: var(--tds-border-radius-container-pill); /* 384px */
   font-family: var(--tds-typography-label-semibold-s-font-family);
   font-weight: var(--tds-typography-label-semibold-s-font-weight);
   font-size: var(--tds-typography-label-semibold-s-font-size);

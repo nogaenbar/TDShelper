@@ -3,8 +3,8 @@
  * PIXEL-PERFECT from Figma design 3968:532312
  * 
  * Using exact tokens from Token Studio:
- * - height: tds.dimension.element.height.2_5x
- * - horizontalPadding: tds.spacing.container.0_75x
+ * - height: tds.dimension.element.height.2-5x
+ * - horizontalPadding: tds.spacing.container.0-75x
  * - borderRadius: tds.borderRadius.focus.pill
  * - typography: tds.typography.label.semibold.sm
  * 
@@ -15,22 +15,22 @@
 
 .tds-toggle-tab-bar {
   background-color: var(--tds-color-background-surfaceMedium);
-  border-radius: var(--tds-borderRadius-focus-pill);
+  border-radius: var(--tds-border-radius-focus-pill);
   box-shadow: var(--tds-elevation-subtle);
   flex-shrink: 0;
 }
 
 .tds-toggle-tab-bar__container {
   display: flex;
-  gap: var(--tds-spacing-container-0_25x); /* 4px gap between tabs */
-  padding: var(--tds-spacing-container-0_25x); /* 4px container padding */
+  gap: var(--tds-spacing-container-0-25x); /* 4px gap between tabs */
+  padding: var(--tds-spacing-container-0-25x); /* 4px container padding */
 }
 
 .tds-toggle-tab-bar__tab {
   /* Dimensions from Token Studio */
-  height: var(--tds-dimension-element-height-2_5x);
-  padding: var(--tds-spacing-container-0_5x) var(--tds-spacing-container-0_75x); /* 8px vertical, 12px horizontal */
-  border-radius: var(--tds-borderRadius-focus-pill);
+  height: var(--tds-dimension-element-height-2-5x);
+  padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-75x); /* 8px vertical, 12px horizontal */
+  border-radius: var(--tds-border-radius-focus-pill);
   border: none;
   
   /* Typography from Token Studio */
@@ -83,7 +83,7 @@
 }
 
 .tds-toggle-tab-bar__tab:focus-visible {
-  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
-  outline-offset: var(--tds-borderWidth-base-m);
+  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-border-width-base-m);
 }
 

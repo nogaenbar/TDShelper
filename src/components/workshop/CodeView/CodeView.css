@@ -8,12 +8,12 @@
 
 .tds-code-view__code {
   background-color: var(--tds-color-background-surfaceMedium);
-  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
-  border-radius: var(--tds-borderRadius-container-1x);
-  padding: var(--tds-spacing-container-1_5x);
+  border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
+  border-radius: var(--tds-border-radius-container-1x);
+  padding: var(--tds-spacing-container-1-5x);
   overflow-x: auto;
   font-family: 'Courier New', monospace;
-  font-size: var(--tds-core-fontSize-scaled-0_87x);
+  font-size: var(--tds-core-fontSize-scaled-0-87x);
   line-height: var(--tds-core-lineHeight-large);
   color: var(--tds-color-foreground-default);
 }
