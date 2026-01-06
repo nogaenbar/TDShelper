@@ -137,16 +137,22 @@
   /* label fill: tds.color.element.tertiary.onTertiary */
   color: var(--tds-color-element-tertiary-on-tertiary);
   /* border: tds.border.action.transparent */
+  border-width: var(--tds-border-action-transparent-width);
+  border-style: var(--tds-border-action-transparent-style);
   border-color: var(--tds-border-action-transparent-color);
 }
 
 .tds-button--tertiary:hover:not(:disabled) {
   background-color: var(--tds-color-element-tertiary-hover);
+  border-width: var(--tds-border-width-base-s);
+  border-style: solid;
   border-color: var(--tds-color-border-subtle);
 }
 
 .tds-button--tertiary:active:not(:disabled) {
   background-color: var(--tds-color-element-tertiary-active);
+  border-width: var(--tds-border-width-base-s);
+  border-style: solid;
   border-color: var(--tds-color-border-medium);
 }
 
@@ -155,6 +161,8 @@
 .tds-button--tertiary:disabled {
   background-color: var(--tds-color-element-tertiary-default);
   color: var(--tds-color-element-disabled-on-disabled);
+  border-width: var(--tds-border-action-transparent-width);
+  border-style: var(--tds-border-action-transparent-style);
   border-color: var(--tds-border-action-transparent-color);
   cursor: not-allowed;
 }
