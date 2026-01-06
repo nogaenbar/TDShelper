@@ -159,7 +159,7 @@
   --tds-core-color-paintbox-grey-bright: #c9c9c9;
   --tds-core-color-paintbox-grey-pale: #f4f4f4;
   --tds-core-color-paintbox-grey-earth: #a1a1a1;
-  --tds-core-color-transparent: #0000; /** transparent  */
+  --tds-core-color-transparent: transparent; /** transparent  */
   --tds-core-color-gradient-default: linear-gradient(90deg, #FFAE00 0%, #FF8888 15%, #FF85C7 31%, #E372FF 47%, #AFA1FF 65%, #7ACAFF 79%, #3AE3B1 100%);
   --tds-core-color-gradient-strong: linear-gradient(90deg, #FF8902 0%, #FF4F30 23%, #FF3D87 42%, #CC30E1 61%, #735BFF 76%, #09F 98%, #00A7BD 100%);
   --tds-core-color-gradient-backdrop: linear-gradient(0deg, rgba(51,51,51,1.0) 0.0%, rgba(51,51,51,0.44) 55.5%, rgba(51,51,51,0.18) 81.8%, rgba(51,51,51,0.06) 94.1%, rgba(51,51,51,0.0) 100.0%);
@@ -331,7 +331,7 @@
    */
   --tds-color-element-primary-accent-active: linear-gradient(90deg, #FF4F30 0%, #FF3D87 36%, #CC30E1 48%, #735BFF 76%);
   --tds-color-element-primary-accent-on-primary-accent: #ffffff; /** color for elements (i.e text and icons) that are placed on primary accent background */
-  --tds-color-element-secondary-default: #0000; /** background default color for secondary interactive elements (e.g buttons) */
+  --tds-color-element-secondary-default: transparent; /** background default color for secondary interactive elements (e.g buttons) */
   /**
    * Background hover color for secondary interactive elements (e.g buttons)
    * 
@@ -345,7 +345,7 @@
    */
   --tds-color-element-secondary-active: #d2000f3d;
   --tds-color-element-secondary-on-secondary: #d2000f; /** color for elements (i.e text and icons) that are placed on secondary background */
-  --tds-color-element-tertiary-default: #0000; /** background default color for tertiary interactive elements (e.g buttons and .Tab) */
+  --tds-color-element-tertiary-default: transparent; /** background default color for tertiary interactive elements (e.g buttons and .Tab) */
   /**
    * Background hover color for tertiary interactive elements (e.g buttons)
    * 
@@ -361,7 +361,7 @@
   --tds-color-element-tertiary-on-tertiary: #333333; /** color for elements (i.e text and icons) that are placed on tertiary background */
   --tds-color-element-tertiary-on-tertiary-contrast: #ffffff; /** Color for elements (i.e text and icons) that are placed on tertiary background. The color will not change when switching modes since it is intended to work on a darker background. */
   --tds-color-element-tertiary-on-tertiary-hover: #d2000f; /** Hover color for elements (i.e text and icons) that are placed on tertiary background. For example, the text on hover on the .MenuItemText and .Tab */
-  --tds-color-element-tertiary-accent-default: #0000; /** background default color for tertiary accent interactive elements (e.g buttons) */
+  --tds-color-element-tertiary-accent-default: transparent; /** background default color for tertiary accent interactive elements (e.g buttons) */
   /**
    * Background hover color for tertiary accent interactive elements (e.g buttons)
    * 
@@ -394,7 +394,7 @@
    */
   --tds-color-element-tertiary-overlay-active: #fff;
   --tds-color-element-tertiary-overlay-on-tertiary-overlay: #333333; /** color for elements (i.e text and icons) that are placed on tertiary overlay background */
-  --tds-color-element-selected-neutral-default: #0000; /** background color for selected elements (e.g .Tab) */
+  --tds-color-element-selected-neutral-default: transparent; /** background color for selected elements (e.g .Tab) */
   --tds-color-element-selected-neutral-hover: #ebebeb; /** Background hover color for selected elements  */
   --tds-color-element-selected-neutral-active: #e0e0e0; /** background color for selected elements  */
   --tds-color-element-selected-neutral-on-selected-neutral: #d2000f; /** color for elements (i.e text and icons) that are placed on selected background. For exmaple: .MenuItemText */
@@ -449,27 +449,27 @@
   --tds-color-element-purpose-flash-sale-hover: #e2d1e5;
   --tds-color-element-purpose-flash-sale-active: #7d3d90;
   --tds-color-element-purpose-flash-sale-on-flash-sale: #ebebeb;
-  --tds-color-element-category-sing-and-dance-default: #0000; /** background color for elements with sing-and-dance theming (e.g Tags, Badge) */
+  --tds-color-element-category-sing-and-dance-default: transparent; /** background color for elements with sing-and-dance theming (e.g Tags, Badge) */
   --tds-color-element-category-sing-and-dance-hover: #ec770014; /** background hover color for elements with sing-and-dance theming */
   --tds-color-element-category-sing-and-dance-active: #ec77003d; /** background active color for elements with sing-and-dance theming */
   --tds-color-element-category-sing-and-dance-on-sing-and-dance: #ad5700; /** color for elements (i.e text and icons) that are placed on sing-and-dance backgrounds */
-  --tds-color-element-category-story-time-default: #0000; /** background color for elements with story-time theming (e.g Tags, Badge) */
+  --tds-color-element-category-story-time-default: transparent; /** background color for elements with story-time theming (e.g Tags, Badge) */
   --tds-color-element-category-story-time-hover: #2a7dea14; /** background hover color for elements with story-time theming */
   --tds-color-element-category-story-time-active: #2a7dea3d; /** background active color for elements with story-time theming */
   --tds-color-element-category-story-time-on-story-time: #1568d5; /** color for elements (i.e text and icons) that are placed on story-time backgrounds */
-  --tds-color-element-category-adventure-default: #0000; /** background color for elements with adventure theming (e.g Tags, Badge) */
+  --tds-color-element-category-adventure-default: transparent; /** background color for elements with adventure theming (e.g Tags, Badge) */
   --tds-color-element-category-adventure-hover: #f5a70014; /** background hover color for elements with adventure theming */
   --tds-color-element-category-adventure-active: #f5a7003d; /** background active color for elements with adventure theming */
   --tds-color-element-category-adventure-on-adventure: #946500; /** color for elements (i.e text and icons) that are placed on adventure backgrounds */
-  --tds-color-element-category-sleep-default: #0000; /** background color for elements with sleep theming (e.g Tags, Badge) */
+  --tds-color-element-category-sleep-default: transparent; /** background color for elements with sleep theming (e.g Tags, Badge) */
   --tds-color-element-category-sleep-hover: #ad95e314; /** background hover color for elements with sleep theming */
   --tds-color-element-category-sleep-active: #ad95e33d; /** background active color for elements with sleep theming */
   --tds-color-element-category-sleep-on-sleep: #7b56d2; /** color for elements (i.e text and icons) that are placed on sleep backgrounds */
-  --tds-color-element-category-mindfulness-default: #0000; /** background color for elements with sleep mindfulness (e.g Tags, Badge) */
+  --tds-color-element-category-mindfulness-default: transparent; /** background color for elements with sleep mindfulness (e.g Tags, Badge) */
   --tds-color-element-category-mindfulness-hover: #79a6c214; /** background hover color for elements with mindfulness theming */
   --tds-color-element-category-mindfulness-active: #79a6c23d; /** background active color for elements with mindfulness theming */
   --tds-color-element-category-mindfulness-on-mindfulness: #42728f; /** color for elements (i.e text and icons) that are placed on mindfulness backgrounds */
-  --tds-color-element-category-learn-default: #0000; /** background color for elements with sleep learn (e.g Tags, Badge) */
+  --tds-color-element-category-learn-default: transparent; /** background color for elements with sleep learn (e.g Tags, Badge) */
   --tds-color-element-category-learn-hover: #1f702714; /** background hover color for elements with learn theming */
   --tds-color-element-category-learn-active: #1f70273d; /** background active color for elements with learn theming */
   --tds-color-element-category-learn-on-learn: #1f7027; /** color for elements (i.e text and icons) that are placed on learn backgrounds */
@@ -488,7 +488,7 @@
    * 
    * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
    */
-  --tds-color-border-transparent: #0000;
+  --tds-color-border-transparent: transparent;
   /**
    * light border color
    * 
@@ -829,7 +829,7 @@
    * This is a synamic ssystem that will change according to the selected theme:
    * The color token is a dynamic variable but the width and style are the same across all themes.
    */
-  --tds-border-action-transparent-color: #0000;
+  --tds-border-action-transparent-color: transparent;
   /**
    * A composite token border system to be applied on any interactive component or element wich has a border (e.g buttons, inputs)
    * This is a synamic ssystem that will change according to the selected theme:

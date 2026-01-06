@@ -157,9 +157,14 @@ async function buildTokens() {
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
 
-  // Post-process to add @font-faces at the beginning of the file
+  // Post-process to add @font-faces and fix transparent colors
   const outputPath = path.join(__dirname, '..', 'src', 'tokens', 'variables.css');
   let cssContent = fs.readFileSync(outputPath, 'utf8');
+  
+  // Convert #0000 (4-digit hex with alpha) to 'transparent' keyword for better browser support
+  // This ensures transparent colors render correctly in all browsers
+  cssContent = cssContent.replace(/:\s*#0000(\s*;|\s*\/\*)/g, ': transparent$1');
+  
   cssContent = generateFontFaces() + '\n' + cssContent;
   fs.writeFileSync(outputPath, cssContent, 'utf8');
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Button.css';
 
 /**
@@ -51,6 +51,27 @@ export function Button({
     .filter(Boolean)
     .join(' ');
   
+  const buttonRef = useRef(null);
+  
+  // Debug: Log computed border styles for tertiary buttons
+  useEffect(() => {
+    if (buttonRef.current && variant === 'tertiary') {
+      const computed = window.getComputedStyle(buttonRef.current);
+      // #region agent log
+      fetch('http://127.0.0.1:7242/ingest/ae87e052-676b-4cb8-9838-128b6d5f64ee',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Button.jsx:useEffect',message:'Tertiary button border debug',data:{variant,size,disabled,computedBorderColor:computed.borderColor,computedBorderWidth:computed.borderWidth,computedBorderStyle:computed.borderStyle,transparentColorToken:'var(--tds-border-action-transparent-color)'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
+      console.log('Tertiary Button Border Debug:', {
+        variant,
+        size,
+        disabled,
+        computedBorderColor: computed.borderColor,
+        computedBorderWidth: computed.borderWidth,
+        computedBorderStyle: computed.borderStyle,
+        transparentColorToken: 'var(--tds-border-action-transparent-color)'
+      });
+    }
+  }, [variant, size, disabled]);
+  
   // Placeholder icon component (will be replaced with icon library later)
   const IconPlaceholder = () => (
     <svg
@@ -67,6 +88,7 @@ export function Button({
 
   return (
     <button
+      ref={buttonRef}
       type={type}
       className={classes}
       onClick={onClick}

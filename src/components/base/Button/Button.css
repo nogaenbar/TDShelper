@@ -137,6 +137,7 @@
   /* label fill: tds.color.element.tertiary.onTertiary */
   color: var(--tds-color-element-tertiary-on-tertiary);
   /* border: tds.border.action.transparent */
+  /* Note: #0000 should be transparent, but if visible, the token may need adjustment */
   border-width: var(--tds-border-action-transparent-width);
   border-style: var(--tds-border-action-transparent-style);
   border-color: var(--tds-border-action-transparent-color);
