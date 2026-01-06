@@ -40,32 +40,6 @@ export function Sidebar({
           onSelectComponent={onSelectComponent}
         />
       </div>
-
-      {/* New Component Button */}
-      <div className="tds-sidebar__new-component-action" data-node-id="8164:14108">
-        <Button
-          variant="primary"
-          size="medium"
-          onClick={onNewComponent}
-        >
-          <span>New Component</span>
-          <svg 
-            width="20" 
-            height="20" 
-            viewBox="0 0 20 20" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path 
-              d="M10 4V16M4 10H16" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round"
-            />
-          </svg>
-        </Button>
-      </div>
     </aside>
   );
 }
