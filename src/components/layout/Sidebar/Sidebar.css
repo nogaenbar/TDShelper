@@ -10,7 +10,7 @@
 .tds-sidebar {
   width: var(--tds-dimension-element-min-width-20x); /* 320px */
   height: 100vh;
-  background-color: var(--tds-color-background-surfaceMedium); /* white */
+  background-color: var(--tds-color-background-surface-medium); /* white */
   border-right: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
   display: flex;
   flex-direction: column;

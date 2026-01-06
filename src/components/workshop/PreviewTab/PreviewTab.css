@@ -83,7 +83,7 @@
 
 .tds-preview-tab__variant-item {
   padding: var(--tds-spacing-container-1-5x);
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
   border-radius: var(--tds-border-radius-container-0-5x);
   min-width: 0; /* Prevent grid item from overflowing */
@@ -156,7 +156,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--tds-spacing-container-2x);
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
   border-radius: var(--tds-border-radius-container-1x);
   min-height: var(--tds-dimension-element-height-10x);

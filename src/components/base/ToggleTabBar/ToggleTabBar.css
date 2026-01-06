@@ -14,7 +14,7 @@
  */
 
 .tds-toggle-tab-bar {
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border-radius: var(--tds-border-radius-focus-pill);
   box-shadow: var(--tds-elevation-subtle);
   flex-shrink: 0;

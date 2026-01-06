@@ -16,7 +16,7 @@
 
 /* Header: white background, bottom border, 88px height */
 .tds-main-content__header {
-  background-color: var(--tds-color-background-surfaceMedium); /* white */
+  background-color: var(--tds-color-background-surface-medium); /* white */
   border-bottom: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
   padding: var(--tds-spacing-container-1x) var(--tds-spacing-container-1-5x); /* 16px 24px */
   flex-shrink: 0;

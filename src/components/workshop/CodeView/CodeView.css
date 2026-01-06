@@ -7,7 +7,7 @@
 }
 
 .tds-code-view__code {
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
   border-radius: var(--tds-border-radius-container-1x);
   padding: var(--tds-spacing-container-1-5x);

@@ -14,7 +14,7 @@
 }
 
 .tds-properties-table__container {
-  background-color: var(--tds-color-background-surfaceMedium); /* white */
+  background-color: var(--tds-color-background-surface-medium); /* white */
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
   border-radius: var(--tds-border-radius-container-1x); /* 16px */
   overflow: hidden;
@@ -24,7 +24,7 @@
 .tds-properties-table__table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
 }
 
 /* Table Header: beige background #F4F1ED at 30% opacity (from new Figma) */
@@ -50,7 +50,7 @@
 
 /* Table Body */
 .tds-properties-table__body {
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
 }
 
 .tds-properties-table__row {
@@ -125,7 +125,7 @@
 .tds-properties-table__select {
   display: inline-block;
   padding: var(--tds-spacing-container-0-25x) var(--tds-spacing-container-0-5x);
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
   border-radius: var(--tds-border-radius-container-0-25x);
   font-family: 'Inter', 'Courier New', monospace;
@@ -157,7 +157,7 @@
 .tds-properties-table__input {
   display: inline-block;
   padding: var(--tds-spacing-container-0-25x) var(--tds-spacing-container-0-5x);
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
   border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
   border-radius: var(--tds-border-radius-container-0-25x);
   font-family: 'Inter', 'Courier New', monospace;
@@ -178,7 +178,7 @@
   outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
   outline-offset: var(--tds-border-width-base-s);
   border-color: var(--tds-color-border-focus);
-  background-color: var(--tds-color-background-surfaceMedium);
+  background-color: var(--tds-color-background-surface-medium);
 }
 
 .tds-properties-table__input::placeholder {
