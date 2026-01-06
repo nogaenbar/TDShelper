@@ -25,9 +25,10 @@
   height: var(--tds-dimension-element-height-2-5x); /* 40px */
   padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-75x); /* 8px 12px */
   border: none;
-  border-radius: var(--tds-border-radius-container-0-5x); /* 8px */
-  background-color: transparent;
-  color: var(--tds-color-foreground-default); /* #333 */
+  border-radius: var(--tds-border-radius-container-0-37x);
+  /* Default state (unselected): tertiary tokens */
+  background-color: var(--tds-color-element-tertiary-default);
+  color: var(--tds-color-element-tertiary-on-tertiary);
   font-family: var(--tds-typography-label-medium-sm-font-family);
   font-weight: var(--tds-typography-label-medium-sm-font-weight);
   font-size: var(--tds-typography-label-medium-sm-font-size);
@@ -38,15 +39,22 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+/* Hover state (unselected): tertiary hover */
 .tds-component-list__item:hover:not(.tds-component-list__item--selected) {
   background-color: var(--tds-color-element-tertiary-hover);
-  color: var(--tds-color-element-tertiary-onTertiaryHover);
+  color: var(--tds-color-element-tertiary-on-tertiary);
 }
 
-/* Selected state: gray background #E0E0E0, red text #D2000F */
+/* Selected state: selectedPrimary tokens */
 .tds-component-list__item--selected {
-  background-color: var(--tds-color-element-selectedNeutral-active); /* #E0E0E0 */
-  color: var(--tds-color-element-selectedNeutral-onSelectedNeutral); /* #D2000F */
+  background-color: var(--tds-color-element-selected-primary-default);
+  color: var(--tds-color-element-selected-primary-on-selected-primary);
+}
+
+/* Selected hover state: selectedPrimary hover */
+.tds-component-list__item--selected:hover {
+  background-color: var(--tds-color-element-selected-primary-hover);
+  color: var(--tds-color-element-selected-primary-on-selected-primary);
 }
 
 .tds-component-list__item:focus-visible {
@@ -69,7 +77,7 @@
 
 .tds-component-list__header-text {
   display: block;
-  color: var(--tds-color-foreground-subtle);
+  color: var(--tds-color-foreground-medium);
   font-family: var(--tds-typography-label-medium-xs-font-family);
   font-weight: var(--tds-typography-label-medium-xs-font-weight);
   font-size: var(--tds-typography-label-medium-xs-font-size);
