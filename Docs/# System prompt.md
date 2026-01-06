@@ -35,6 +35,86 @@ You must **define the system** (tokens, IA, patterns) and **implement it in code
 
 ### Tokens
 
+**📖 Full Documentation:** See [Style Dictionary Setup.md](./Style%20Dictionary%20Setup.md)
+
+#### Core Principles
+
+**CRITICAL: This design system uses ONLY CSS variables from our token system.**
+
+- ✅ **DO:** Use `var(--tds-color-background-surface-medium)`
+- ❌ **DON'T:** Use hardcoded values like `#ffffff`, `16px`, `600`, etc.
+- ❌ **DON'T:** Use magic numbers or literal color values
+
+**Every visual property MUST derive from a token in `src/tokens/variables.css`.**
+
+#### Token Pipeline
+
+```
+Token Studio (Figma) → TDS Helper tokens.json → Style Dictionary → variables.css → Components
+```
+
+#### Token Naming Convention
+
+All tokens use **kebab-case** (Style Dictionary standard):
+
+```css
+/* ✅ CORRECT */
+--tds-color-background-surface-medium
+--tds-spacing-container-1-5x
+--tds-border-radius-container-0-75x
+
+/* ❌ WRONG - don't use camelCase or underscores */
+--tds-color-background-surfaceMedium
+--tds-spacing-container-1_5x
+```
+
+#### Semantic vs Core Tokens
+
+**ALWAYS prefer semantic tokens over core tokens:**
+
+```css
+/* ✅ BEST: Semantic (contextual meaning) */
+background-color: var(--tds-color-background-surface-medium);
+color: var(--tds-color-foreground-default);
+
+/* ⚠️ AVOID: Core (no context) */
+background-color: var(--tds-core-color-primary-canvas-chalkboard-100);
+```
+
+#### Rebuilding Tokens
+
+When `TDS Helper tokens.json` is updated:
+
+```bash
+npm run build-tokens
+```
+
+This runs Style Dictionary with:
+- Token Studio transforms (@tokens-studio/sd-transforms)
+- Theme filtering (DEFAULT only, skip INVERTED)
+- Composite token expansion (typography, border, shadow)
+- Color modifier resolution (lighten, darken, alpha, mix)
+- Math expression evaluation
+
+#### Key Transforms Applied
+
+| Transform | Purpose |
+|-----------|---------|
+| `ts/color/modifiers` | Resolves Token Studio color modifiers |
+| `ts/size/px` | Adds px to unitless dimensions |
+| `ts/typography/fontWeight` | Converts names to numbers (Semi Bold → 600) |
+| `ts/resolveMath` | Evaluates math expressions |
+| `name/kebab` | Converts to kebab-case naming |
+
+#### Documentation Updates
+
+**When making changes to the token pipeline:**
+1. Ask user if documentation should be updated
+2. Update [Style Dictionary Setup.md](./Style%20Dictionary%20Setup.md) if process changes
+3. Update this section if core principles change
+
+we use style dictionary to transform our JSON file 
+
 Always use ONLY the set of tokens from the variables.css file.
 
 ⸻
