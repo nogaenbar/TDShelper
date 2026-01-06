@@ -1,0 +1,193 @@
+/**
+ * Button Component Styles
+ * All values use tokens from variables.css - no magic numbers
+ */
+
+.tds-button {
+  /* Base styles using tokens */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: var(--tds-typography-label-semibold-sm-font-family);
+  /* font-size and font-weight are set per size class, not in base */
+  line-height: normal; /* Single-line text, no line-height needed */
+  letter-spacing: var(--tds-core-font-letterSpacing-none);
+  text-decoration: var(--tds-core-textDecoration-none);
+  text-transform: var(--tds-core-textCase-none);
+  
+  /* Border using composite token from Figma */
+  border: var(--tds-border-action-transparent-width) var(--tds-border-action-transparent-style) var(--tds-border-action-transparent-color);
+  
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Remove default button styles */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Button Sizes - Using exact Figma tokens */
+/* Higher specificity to ensure size overrides base font-size */
+.tds-button.tds-button--small,
+.tds-button--small {
+  /* Figma tokens for small size */
+  min-height: var(--tds-dimension-element-height-2x);
+  padding: var(--tds-spacing-container-0_5x) var(--tds-spacing-container-0_63x);
+  gap: var(--tds-spacing-container-0_37x);
+  border-radius: var(--tds-borderRadius-container-0_63x);
+  font-size: var(--tds-typography-label-semibold-s-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-s-font-weight);
+}
+
+.tds-button.tds-button--medium,
+.tds-button--medium {
+  /* Figma tokens for medium size */
+  min-height: var(--tds-dimension-element-height-2_5x);
+  padding: var(--tds-spacing-container-0_63x) var(--tds-spacing-container-1x);
+  gap: var(--tds-spacing-container-0_5x);
+  border-radius: var(--tds-borderRadius-container-0_75x);
+  font-size: var(--tds-typography-label-semibold-sm-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-sm-font-weight);
+}
+
+.tds-button.tds-button--large,
+.tds-button--large {
+  /* Figma tokens for large size */
+  min-height: var(--tds-dimension-element-height-3_25x);
+  padding: var(--tds-spacing-container-0_88x) var(--tds-spacing-container-1_5x);
+  gap: var(--tds-spacing-container-0_63x);
+  border-radius: var(--tds-borderRadius-container-1_12x);
+  font-size: var(--tds-typography-label-semibold-m-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-m-font-weight);
+}
+
+/* Primary Variant - Using exact Figma tokens */
+.tds-button--primary {
+  background-color: var(--tds-color-element-primary-default);
+  color: var(--tds-color-element-primary-onPrimary);
+  letter-spacing: var(--tds-core-font-letterSpacing-subtle);
+}
+
+.tds-button--primary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-primary-hover);
+}
+
+.tds-button--primary:active:not(:disabled) {
+  background-color: var(--tds-color-element-primary-active);
+}
+
+.tds-button--primary:focus-visible {
+  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-borderWidth-base-m);
+  border-radius: var(--tds-borderRadius-focus-0_81x);
+}
+
+/* Secondary Variant */
+.tds-button--secondary {
+  background-color: var(--tds-color-element-secondary-default);
+  color: var(--tds-color-element-secondary-onSecondary);
+  border-color: var(--tds-color-element-secondary-onSecondary);
+}
+
+.tds-button--secondary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-secondary-hover);
+  border-color: var(--tds-color-element-secondary-hover);
+}
+
+.tds-button--secondary:active:not(:disabled) {
+  background-color: var(--tds-color-element-secondary-active);
+  border-color: var(--tds-color-element-secondary-active);
+}
+
+/* Tertiary Variant */
+.tds-button--tertiary {
+  background-color: var(--tds-color-element-tertiary-default);
+  color: var(--tds-color-element-tertiary-onTertiary);
+  border-color: var(--tds-color-border-transparent);
+}
+
+.tds-button--tertiary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-hover);
+  border-color: var(--tds-color-border-subtle);
+}
+
+.tds-button--tertiary:active:not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-active);
+  border-color: var(--tds-color-border-medium);
+}
+
+/* Disabled State - Using exact Figma token */
+.tds-button--disabled,
+.tds-button:disabled {
+  background-color: var(--tds-color-element-disabled-default);
+  color: var(--tds-color-element-disabled-onDisabled);
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.tds-button--loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.tds-button__spinner {
+  display: inline-block;
+  width: var(--tds-spacing-container-1x);
+  height: var(--tds-spacing-container-1x);
+  border: var(--tds-borderWidth-base-m) solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--tds-borderRadius-container-pill);
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tds-button__content {
+  display: inline-flex;
+  align-items: center;
+  /* Gap is handled by parent .tds-button gap property per size */
+}
+
+.tds-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+
+/* Icon sizing per button size */
+.tds-button--small .tds-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.tds-button--medium .tds-button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.tds-button--large .tds-button__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon positioning */
+.tds-button__icon--left {
+  order: -1;
+}
+
+.tds-button__icon--right {
+  order: 1;
+}
+
+.tds-button--loading .tds-button__content {
+  opacity: 0.7;
+}
+

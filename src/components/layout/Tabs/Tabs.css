@@ -1,0 +1,31 @@
+/**
+ * Tabs Component Styles
+ * PIXEL-PERFECT from Figma design 8164:14119-14120
+ * 
+ * Tab bar container: white background, bottom border, 51px height
+ * Content area: grows to fill space
+ */
+
+.tds-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Tab bar header container: white background with border */
+.tds-tabs__bar-container {
+  background-color: var(--tds-color-background-surfaceMedium); /* white */
+  border-bottom: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
+  padding: 0 0 var(--tds-borderWidth-base-s) var(--tds-spacing-container-1_5x); /* 0 0 1px 24px */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Content area: scrollable, 24px padding */
+.tds-tabs__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--tds-spacing-container-1_5x); /* 24px */
+}
+

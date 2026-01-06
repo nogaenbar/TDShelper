@@ -1,0 +1,89 @@
+/**
+ * ToggleTabBar Component Styles  
+ * PIXEL-PERFECT from Figma design 3968:532312
+ * 
+ * Using exact tokens from Token Studio:
+ * - height: tds.dimension.element.height.2_5x
+ * - horizontalPadding: tds.spacing.container.0_75x
+ * - borderRadius: tds.borderRadius.focus.pill
+ * - typography: tds.typography.label.semibold.sm
+ * 
+ * States:
+ * - Selected: tds.color.element.selectedPrimary (default/hover/active)
+ * - Unselected: tds.color.element.tertiary (default/hover/active)
+ */
+
+.tds-toggle-tab-bar {
+  background-color: var(--tds-color-background-surfaceMedium);
+  border-radius: var(--tds-borderRadius-focus-pill);
+  box-shadow: var(--tds-elevation-subtle);
+  flex-shrink: 0;
+}
+
+.tds-toggle-tab-bar__container {
+  display: flex;
+  gap: var(--tds-spacing-container-0_25x); /* 4px gap between tabs */
+  padding: var(--tds-spacing-container-0_25x); /* 4px container padding */
+}
+
+.tds-toggle-tab-bar__tab {
+  /* Dimensions from Token Studio */
+  height: var(--tds-dimension-element-height-2_5x);
+  padding: var(--tds-spacing-container-0_5x) var(--tds-spacing-container-0_75x); /* 8px vertical, 12px horizontal */
+  border-radius: var(--tds-borderRadius-focus-pill);
+  border: none;
+  
+  /* Typography from Token Studio */
+  font-family: var(--tds-typography-label-semibold-sm-font-family);
+  font-weight: var(--tds-typography-label-semibold-sm-font-weight);
+  font-size: var(--tds-typography-label-semibold-sm-font-size);
+  line-height: normal; /* Override line-height for exact match */
+  letter-spacing: var(--tds-core-font-letterSpacing-negative);
+  
+  /* Base state - Unselected (tertiary) */
+  /* Note: tertiary-default token resolves to black, but for unselected tabs we want transparent */
+  background-color: transparent;
+  color: var(--tds-color-element-tertiary-onTertiary);
+  
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+/* Selected state - Default */
+.tds-toggle-tab-bar__tab--selected {
+  background-color: var(--tds-color-element-selectedPrimary-default);
+  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+}
+
+/* Selected state - Hover */
+.tds-toggle-tab-bar__tab--selected:hover {
+  background-color: var(--tds-color-element-selectedPrimary-hover);
+  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+}
+
+/* Selected state - Active */
+.tds-toggle-tab-bar__tab--selected:active {
+  background-color: var(--tds-color-element-selectedPrimary-active);
+  color: var(--tds-color-element-selectedPrimary-onSelectedPrimary);
+}
+
+/* Unselected state - Hover */
+.tds-toggle-tab-bar__tab:not(.tds-toggle-tab-bar__tab--selected):hover {
+  background-color: var(--tds-color-element-tertiary-hover);
+  color: var(--tds-color-element-tertiary-onTertiary);
+}
+
+/* Unselected state - Active */
+.tds-toggle-tab-bar__tab:not(.tds-toggle-tab-bar__tab--selected):active {
+  background-color: var(--tds-color-element-tertiary-active);
+  color: var(--tds-color-element-tertiary-onTertiary);
+}
+
+.tds-toggle-tab-bar__tab:focus-visible {
+  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-borderWidth-base-m);
+}
+

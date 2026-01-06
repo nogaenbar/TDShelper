@@ -1,0 +1,56 @@
+/**
+ * Base Styles and Reset
+ * Using only tokens from variables.css
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--tds-core-fontFamilies-Wonder), sans-serif;
+  font-size: var(--tds-core-fontSize-scaled-1x);
+  line-height: var(--tds-core-lineHeight-large);
+  color: var(--tds-color-foreground-default);
+  background-color: var(--tds-color-background-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+

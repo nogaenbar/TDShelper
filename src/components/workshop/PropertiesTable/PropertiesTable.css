@@ -1,0 +1,188 @@
+/**
+ * PropertiesTable Component Styles
+ * PIXEL-PERFECT from Figma design 8164:14154
+ * 
+ * Container: white background, border, 16px border-radius, 1px padding
+ * Header: #F4F1ED background at 30% opacity, 48.5px height
+ * Rows: 50px height, bottom borders
+ * Property names: light blue code blocks
+ * Default values: beige code blocks
+ */
+
+.tds-properties-table {
+  width: 100%;
+}
+
+.tds-properties-table__container {
+  background-color: var(--tds-color-background-surfaceMedium); /* white */
+  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle); /* #E2DBD2 */
+  border-radius: var(--tds-borderRadius-container-1x); /* 16px */
+  overflow: hidden;
+  padding: var(--tds-borderWidth-base-s); /* 1px */
+}
+
+.tds-properties-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--tds-color-background-surfaceMedium);
+}
+
+/* Table Header: beige background #F4F1ED at 30% opacity (from new Figma) */
+.tds-properties-table__header {
+  /* Use color-mix for background opacity to keep text at 100% */
+  background-color: color-mix(in srgb, var(--tds-core-color-primary-canvas-chalkboard-100) 30%, transparent);
+}
+
+.tds-properties-table__header-row {
+  height: calc(var(--tds-dimension-element-height-3x) + var(--tds-spacing-container-0_25x)); /* 48.5px */
+}
+
+.tds-properties-table__header-cell {
+  padding: var(--tds-spacing-container-0_75x) var(--tds-spacing-container-1x); /* 12px 16px */
+  text-align: left;
+  font-family: var(--tds-typography-title-bold-sm-font-family);
+  font-weight: var(--tds-typography-title-bold-sm-font-weight);
+  font-size: var(--tds-typography-title-bold-sm-font-size);
+  line-height: var(--tds-typography-title-bold-sm-line-height);
+  color: var(--tds-color-foreground-default); /* #333 */
+  border-bottom: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+}
+
+/* Table Body */
+.tds-properties-table__body {
+  background-color: var(--tds-color-background-surfaceMedium);
+}
+
+.tds-properties-table__row {
+  height: var(--tds-dimension-element-height-3_125x); /* 50px */
+  border-bottom: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+}
+
+.tds-properties-table__row:last-child {
+  border-bottom: none;
+}
+
+.tds-properties-table__cell {
+  padding: var(--tds-spacing-container-0_75x) var(--tds-spacing-container-1x); /* 13px 16px */
+  vertical-align: middle;
+}
+
+/* Property name code block: light blue background (from Figma) */
+.tds-properties-table__property-name {
+  display: inline-block;
+  padding: var(--tds-spacing-container-0_25x) var(--tds-spacing-container-0_5x);
+  background-color: color-mix(in srgb, var(--tds-core-color-paintbox-blue-pale) 20%, transparent);
+  border-radius: var(--tds-borderRadius-container-0_25x);
+  font-family: 'Inter', 'Courier New', monospace;
+  font-size: var(--tds-core-fontSize-scaled-1x);
+  font-weight: var(--tds-core-fontWeight-default);
+  line-height: var(--tds-dimension-element-height-1_5x);
+  color: var(--tds-core-color-paintbox-blue-dark);
+}
+
+/* Type styling: plain gray text */
+.tds-properties-table__type {
+  font-family: var(--tds-typography-body-medium-sm-font-family);
+  font-weight: var(--tds-typography-body-medium-sm-font-weight);
+  font-size: var(--tds-typography-body-medium-sm-font-size);
+  line-height: var(--tds-typography-body-medium-sm-line-height);
+  color: var(--tds-color-foreground-subtle); /* #7E766B */
+}
+
+/* Default code block: beige background (from Figma) */
+.tds-properties-table__default {
+  display: inline-block;
+  padding: var(--tds-spacing-container-0_25x) var(--tds-spacing-container-0_5x);
+  background-color: var(--tds-core-color-primary-canvas-chalkboard-100);
+  border-radius: var(--tds-borderRadius-container-0_25x);
+  font-family: 'Inter', 'Courier New', monospace;
+  font-size: var(--tds-core-fontSize-scaled-1x);
+  font-weight: var(--tds-core-fontWeight-default);
+  line-height: var(--tds-dimension-element-height-1_5x);
+  color: var(--tds-core-color-primary-canvas-chalkboard-40);
+}
+
+/* Description text: gray #7E766B */
+.tds-properties-table__description {
+  font-family: var(--tds-typography-body-medium-sm-font-family);
+  font-weight: var(--tds-typography-body-medium-sm-font-weight);
+  font-size: var(--tds-typography-body-medium-sm-font-size);
+  line-height: var(--tds-typography-body-medium-sm-line-height);
+  color: var(--tds-color-foreground-subtle); /* #7E766B */
+}
+
+.tds-properties-table__empty {
+  padding: var(--tds-spacing-container-2x);
+  text-align: center;
+  color: var(--tds-color-foreground-subtle);
+  font-family: var(--tds-typography-body-medium-sm-font-family);
+  font-size: var(--tds-typography-body-medium-sm-font-size);
+  font-weight: var(--tds-typography-body-medium-sm-font-weight);
+  line-height: var(--tds-typography-body-medium-sm-line-height);
+}
+
+/* Interactive Select Dropdown - Using only tokens */
+.tds-properties-table__select {
+  display: inline-block;
+  padding: var(--tds-spacing-container-0_25x) var(--tds-spacing-container-0_5x);
+  background-color: var(--tds-color-background-surfaceMedium);
+  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+  border-radius: var(--tds-borderRadius-container-0_25x);
+  font-family: 'Inter', 'Courier New', monospace;
+  font-size: var(--tds-core-fontSize-scaled-1x);
+  font-weight: var(--tds-core-fontWeight-default);
+  line-height: var(--tds-dimension-element-height-1_5x);
+  color: var(--tds-core-color-primary-canvas-chalkboard-40);
+  cursor: pointer;
+  min-width: var(--tds-dimension-element-minWidth-4x);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tds-properties-table__select:hover {
+  border-color: var(--tds-color-border-medium);
+  background-color: var(--tds-color-background-surfaceSubtle);
+}
+
+.tds-properties-table__select:focus {
+  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-borderWidth-base-s);
+  border-color: var(--tds-color-border-focus);
+}
+
+.tds-properties-table__select:active {
+  background-color: var(--tds-color-background-surfaceOpaque);
+}
+
+/* Text Input for string properties - Using only tokens */
+.tds-properties-table__input {
+  display: inline-block;
+  padding: var(--tds-spacing-container-0_25x) var(--tds-spacing-container-0_5x);
+  background-color: var(--tds-color-background-surfaceMedium);
+  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+  border-radius: var(--tds-borderRadius-container-0_25x);
+  font-family: 'Inter', 'Courier New', monospace;
+  font-size: var(--tds-core-fontSize-scaled-1x);
+  font-weight: var(--tds-core-fontWeight-default);
+  line-height: var(--tds-dimension-element-height-1_5x);
+  color: var(--tds-core-color-primary-canvas-chalkboard-40);
+  min-width: var(--tds-dimension-element-minWidth-6x);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tds-properties-table__input:hover {
+  border-color: var(--tds-color-border-medium);
+  background-color: var(--tds-color-background-surfaceSubtle);
+}
+
+.tds-properties-table__input:focus {
+  outline: var(--tds-borderWidth-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-borderWidth-base-s);
+  border-color: var(--tds-color-border-focus);
+  background-color: var(--tds-color-background-surfaceMedium);
+}
+
+.tds-properties-table__input::placeholder {
+  color: var(--tds-color-foreground-subtle);
+  opacity: 0.6;
+}
+

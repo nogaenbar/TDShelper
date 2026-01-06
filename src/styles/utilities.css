@@ -1,0 +1,99 @@
+/**
+ * Utility Classes
+ * Commonly used utility classes built from tokens
+ */
+
+/* Spacing utilities */
+.u-spacing-0_5x {
+  padding: var(--tds-spacing-container-0_5x);
+}
+
+.u-spacing-1x {
+  padding: var(--tds-spacing-container-1x);
+}
+
+.u-spacing-1_5x {
+  padding: var(--tds-spacing-container-1_5x);
+}
+
+.u-spacing-2x {
+  padding: var(--tds-spacing-container-2x);
+}
+
+/* Margin utilities */
+.u-margin-0_5x {
+  margin: var(--tds-spacing-container-0_5x);
+}
+
+.u-margin-1x {
+  margin: var(--tds-spacing-container-1x);
+}
+
+/* Flexbox utilities */
+.u-flex {
+  display: flex;
+}
+
+.u-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.u-flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-flex-1 {
+  flex: 1;
+}
+
+/* Text utilities */
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-brand {
+  color: var(--tds-color-foreground-brand);
+}
+
+.u-text-subtle {
+  color: var(--tds-color-foreground-subtle);
+}
+
+.u-text-default {
+  color: var(--tds-color-foreground-default);
+}
+
+/* Background utilities */
+.u-bg-canvas {
+  background-color: var(--tds-color-background-canvas);
+}
+
+.u-bg-surface {
+  background-color: var(--tds-color-background-surfaceMedium);
+}
+
+/* Border utilities */
+.u-border-subtle {
+  border: var(--tds-borderWidth-base-s) solid var(--tds-color-border-subtle);
+}
+
+.u-border-radius-0_5x {
+  border-radius: var(--tds-borderRadius-container-0_5x);
+}
+
+.u-border-radius-1x {
+  border-radius: var(--tds-borderRadius-container-1x);
+}
+
+.u-border-radius-pill {
+  border-radius: var(--tds-borderRadius-container-pill);
+}
+

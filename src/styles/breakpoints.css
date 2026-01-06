@@ -1,0 +1,21 @@
+/**
+ * Responsive Breakpoints
+ * Using custom media queries with design tokens
+ */
+
+/* Mobile first approach */
+:root {
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+}
+
+/* Example usage in other stylesheets:
+@media (min-width: var(--breakpoint-tablet)) {
+  .component {
+    // tablet and up styles
+  }
+}
+*/
+

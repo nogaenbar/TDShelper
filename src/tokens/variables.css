@@ -1,0 +1,1170 @@
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonder';
+  src: url('/wonder font/Wonder-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --tds-core-color-primary-tonies-red-0: #430f0f;
+  --tds-core-color-primary-tonies-red-10: #490f10;
+  --tds-core-color-primary-tonies-red-20: #5b1011;
+  --tds-core-color-primary-tonies-red-30: #780e12;
+  --tds-core-color-primary-tonies-red-40: #a10a11;
+  --tds-core-color-primary-tonies-red-50: #d2000f;
+  --tds-core-color-primary-tonies-red-60: #f23b44;
+  --tds-core-color-primary-tonies-red-70: #f08f92;
+  --tds-core-color-primary-tonies-red-80: #f5cccc;
+  --tds-core-color-primary-tonies-red-90: #fbefef;
+  --tds-core-color-primary-tonies-red-100: #fefbfb;
+  --tds-core-color-primary-canvas-chalkboard-0: #333333;
+  --tds-core-color-primary-canvas-chalkboard-10: #383837;
+  --tds-core-color-primary-canvas-chalkboard-20: #474544;
+  --tds-core-color-primary-canvas-chalkboard-30: #5f5b56;
+  --tds-core-color-primary-canvas-chalkboard-40: #7e766b;
+  --tds-core-color-primary-canvas-chalkboard-50: #aa9f90;
+  --tds-core-color-primary-canvas-chalkboard-60: #cec5b8;
+  --tds-core-color-primary-canvas-chalkboard-70: #e2dbd2;
+  --tds-core-color-primary-canvas-chalkboard-80: #e8e2db;
+  --tds-core-color-primary-canvas-chalkboard-90: #f0ebe6;
+  --tds-core-color-primary-canvas-chalkboard-100: #f4f1ed;
+  --tds-core-color-primary-neutral-0: #000000;
+  --tds-core-color-primary-neutral-10: #060606;
+  --tds-core-color-primary-neutral-20: #181818;
+  --tds-core-color-primary-neutral-30: #353535;
+  --tds-core-color-primary-neutral-40: #585858;
+  --tds-core-color-primary-neutral-50: #8f8f8f;
+  --tds-core-color-primary-neutral-60: #c2c2c2;
+  --tds-core-color-primary-neutral-70: #e0e0e0;
+  --tds-core-color-primary-neutral-80: #ebebeb;
+  --tds-core-color-primary-neutral-90: #f7f7f7;
+  --tds-core-color-primary-neutral-100: #ffffff;
+  --tds-core-color-paintbox-yellow-dark: #807100;
+  --tds-core-color-paintbox-yellow-vibrant: #ffdd00;
+  --tds-core-color-paintbox-yellow-bright: #ffef36;
+  --tds-core-color-paintbox-yellow-pale: #fff9c1;
+  --tds-core-color-paintbox-yellow-earth: #eddb97;
+  --tds-core-color-paintbox-orange-dark: #a34500;
+  --tds-core-color-paintbox-orange-vibrant: #eb5e00;
+  --tds-core-color-paintbox-orange-bright: #ff9d00;
+  --tds-core-color-paintbox-orange-pale: #ffe8b2;
+  --tds-core-color-paintbox-orange-earth: #eeab6f;
+  --tds-core-color-paintbox-red-dark: #9c0000;
+  --tds-core-color-paintbox-red-vibrant: #f94d32;
+  --tds-core-color-paintbox-red-bright: #fc8a8a;
+  --tds-core-color-paintbox-red-pale: #fbd5c5;
+  --tds-core-color-paintbox-red-earth: #ea8b79;
+  --tds-core-color-paintbox-pink-dark: #94015c;
+  --tds-core-color-paintbox-pink-vibrant: #fc3a85;
+  --tds-core-color-paintbox-pink-bright: #ff85c6;
+  --tds-core-color-paintbox-pink-pale: #f8c9d7;
+  --tds-core-color-paintbox-pink-earth: #e7acce;
+  --tds-core-color-paintbox-purple-dark: #6a2181;
+  --tds-core-color-paintbox-purple-vibrant: #cd30e1;
+  --tds-core-color-paintbox-purple-bright: #e373fe;
+  --tds-core-color-paintbox-purple-pale: #e2cae3;
+  --tds-core-color-paintbox-purple-earth: #bc97c6;
+  --tds-core-color-paintbox-violet-dark: #443285;
+  --tds-core-color-paintbox-violet-vibrant: #755dfd;
+  --tds-core-color-paintbox-violet-bright: #afa1ff;
+  --tds-core-color-paintbox-violet-pale: #dad7ec;
+  --tds-core-color-paintbox-violet-earth: #c2bee0;
+  --tds-core-color-paintbox-blue-dark: #232d7b;
+  --tds-core-color-paintbox-blue-vibrant: #0099ff;
+  --tds-core-color-paintbox-blue-bright: #7bcaff;
+  --tds-core-color-paintbox-blue-pale: #cde9f3;
+  --tds-core-color-paintbox-blue-earth: #78acc8;
+  --tds-core-color-paintbox-turquoise-dark: #005463;
+  --tds-core-color-paintbox-turquoise-vibrant: #00999f;
+  --tds-core-color-paintbox-turquoise-bright: #3ddfb1;
+  --tds-core-color-paintbox-turquoise-pale: #daede6;
+  --tds-core-color-paintbox-turquoise-earth: #afd3cc;
+  --tds-core-color-paintbox-green-dark: #1a7125;
+  --tds-core-color-paintbox-green-vibrant: #00a200;
+  --tds-core-color-paintbox-green-bright: #c0f170;
+  --tds-core-color-paintbox-green-pale: #d7e8ca;
+  --tds-core-color-paintbox-green-earth: #b3d07e;
+  --tds-core-color-paintbox-grey-dark: #262626;
+  --tds-core-color-paintbox-grey-vibrant: #575d60;
+  --tds-core-color-paintbox-grey-bright: #c9c9c9;
+  --tds-core-color-paintbox-grey-pale: #f4f4f4;
+  --tds-core-color-paintbox-grey-earth: #a1a1a1;
+  --tds-core-color-transparent: #0000; /** transparent  */
+  --tds-core-color-gradient-default: linear-gradient(90deg, #FFAE00 0%, #FF8888 15%, #FF85C7 31%, #E372FF 47%, #AFA1FF 65%, #7ACAFF 79%, #3AE3B1 100%);
+  --tds-core-color-gradient-strong: linear-gradient(90deg, #FF8902 0%, #FF4F30 23%, #FF3D87 42%, #CC30E1 61%, #735BFF 76%, #09F 98%, #00A7BD 100%);
+  --tds-core-color-gradient-backdrop: linear-gradient(0deg, rgba(51,51,51,1.0) 0.0%, rgba(51,51,51,0.44) 55.5%, rgba(51,51,51,0.18) 81.8%, rgba(51,51,51,0.06) 94.1%, rgba(51,51,51,0.0) 100.0%);
+  --tds-core-color-gradient-backdrop-text: linear-gradient(0deg, rgba(51,51,51,0) 38.12%, rgba(51,51,51,0.7) 99.17%);
+  --tds-core-color-gradient-canvas-overlay: linear-gradient(180deg, #F4F1ED00 0%, #F4F1EDF2 47.38%);
+  --tds-core-color-gradient-canvas-overlay-inverted: linear-gradient(180deg, rgba(56, 56, 55, 0.00) 0%, rgba(56, 56, 55, 0.94) 47.38%);;
+  --tds-core-color-category-sing-and-dance-dark: #ad5700;
+  --tds-core-color-category-sing-and-dance-medium: #b85c00;
+  --tds-core-color-category-sing-and-dance-initial: #ec7700;
+  --tds-core-color-category-story-time-dark: #1568d5;
+  --tds-core-color-category-story-time-medium: #1772e8;
+  --tds-core-color-category-story-time-initial: #2a7dea;
+  --tds-core-color-category-adventure-dark: #946500;
+  --tds-core-color-category-adventure-medium: #9e6c00;
+  --tds-core-color-category-adventure-initial: #f5a700;
+  --tds-core-color-category-sleep-dark: #7b56d2;
+  --tds-core-color-category-sleep-medium: #815ed4;
+  --tds-core-color-category-sleep-initial: #ad95e3;
+  --tds-core-color-category-mindfulness-dark: #42728f;
+  --tds-core-color-category-mindfulness-medium: #477a9a;
+  --tds-core-color-category-mindfulness-initial: #79a6c2;
+  --tds-core-color-category-learn-dark: #1f7027;
+  --tds-core-color-category-learn-medium: #1f7027;
+  --tds-core-color-category-learn-initial: #1f7027;
+  --tds-core-dimension-0: 0;
+  --tds-core-dimension-6: 1px;
+  --tds-core-dimension-12: 2px;
+  --tds-core-dimension-19: 3px;
+  --tds-core-dimension-25: 4px;
+  --tds-core-dimension-37: 6px;
+  --tds-core-dimension-44: 7px;
+  --tds-core-dimension-50: 8px;
+  --tds-core-dimension-57: 9px;
+  --tds-core-dimension-63: 10px;
+  --tds-core-dimension-69: 11px;
+  --tds-core-dimension-75: 12px;
+  --tds-core-dimension-81: 13px;
+  --tds-core-dimension-88: 14px;
+  --tds-core-dimension-94: 15px;
+  --tds-core-dimension-100: 16px;
+  --tds-core-dimension-113: 18px;
+  --tds-core-dimension-119: 19px;
+  --tds-core-dimension-125: 20px;
+  --tds-core-dimension-150: 24px;
+  --tds-core-dimension-175: 28px;
+  --tds-core-dimension-200: 32px;
+  --tds-core-dimension-225: 36px;
+  --tds-core-dimension-250: 40px;
+  --tds-core-dimension-275: 44px;
+  --tds-core-dimension-300: 48px;
+  --tds-core-dimension-325: 52px;
+  --tds-core-dimension-350: 56px;
+  --tds-core-dimension-375: 60px;
+  --tds-core-dimension-400: 64px;
+  --tds-core-dimension-450: 72px;
+  --tds-core-dimension-500: 80px;
+  --tds-core-dimension-575: 92px;
+  --tds-core-dimension-600: 96px;
+  --tds-core-dimension-700: 112px;
+  --tds-core-dimension-775: 124px;
+  --tds-core-dimension-800: 128px;
+  --tds-core-dimension-900: 144px;
+  --tds-core-dimension-1000: 160px;
+  --tds-core-dimension-1100: 176px;
+  --tds-core-dimension-1200: 192px;
+  --tds-core-dimension-1300: 208px;
+  --tds-core-dimension-1400: 224px;
+  --tds-core-dimension-1500: 240px;
+  --tds-core-dimension-1600: 256px;
+  --tds-core-dimension-1750: 280px;
+  --tds-core-dimension-2000: 320px;
+  --tds-core-dimension-2100: 336px;
+  --tds-core-dimension-2400: 384px;
+  --tds-core-dimension-2600: 416px;
+  --tds-core-dimension-3200: 512px;
+  --tds-core-dimension-4750: 760px;
+  --tds-core-dimension-6150: 984px;
+  --tds-core-dimension-7000: 1120px;
+  --tds-core-dimension-7500: 1200px;
+  --tds-core-dimension-8400: 1344px;
+  --tds-core-dimension-base: 0.16px;
+  --tds-core-size-scale: 16px; /** base-scale of all size-related tokens (size, space, dimension). The default is 1rem = 16(px). If you change it, it will change all size-related tokens. :) */
+  --tds-core-font-families-wonder: Wonder; /** The tonies custom font family */
+  --tds-core-font-weight-default: 400; /** default weight for fonts */
+  --tds-core-font-weight-medium: 500; /** medium weight for fonts */
+  --tds-core-font-weight-semibold: 600; /** semibold weight for fonts */
+  --tds-core-font-weight-bold: 700; /** bold weight for fonts */
+  --tds-core-font-weight-black: 900; /** heaviest weight for fonts */
+  --tds-core-font-size-rem: 16px; /** 👀 If you change this core font size, it will change all font-related tokens. */
+  --tds-core-font-size-scaled-0-5x: 8px;
+  --tds-core-font-size-scaled-0-56x: 9px;
+  --tds-core-font-size-scaled-0-62x: 10px;
+  --tds-core-font-size-scaled-0-68x: 11px;
+  --tds-core-font-size-scaled-0-75x: 12px;
+  --tds-core-font-size-scaled-0-81x: 13px;
+  --tds-core-font-size-scaled-0-87x: 14px;
+  --tds-core-font-size-scaled-0-94x: 15px;
+  --tds-core-font-size-scaled-1-13x: 18px;
+  --tds-core-font-size-scaled-1x: 16px;
+  --tds-core-font-size-scaled-1-25x: 20px;
+  --tds-core-font-size-scaled-1-5x: 24px;
+  --tds-core-font-size-scaled-1-75x: 28px;
+  --tds-core-font-size-scaled-2x: 32px;
+  --tds-core-font-size-scaled-2-25x: 36px;
+  --tds-core-font-size-scaled-2-5x: 40px;
+  --tds-core-font-size-scaled-2-75x: 44px;
+  --tds-core-font-size-scaled-3x: 48px;
+  --tds-core-font-size-scaled-3-25x: 52px;
+  --tds-core-font-size-scaled-3-5x: 56px;
+  --tds-core-font-size-scaled-3-75x: 60px;
+  --tds-core-font-size-scaled-4x: 64px;
+  --tds-core-font-size-scaled-4-5x: 72px;
+  --tds-core-font-size-scaled-5x: 80px;
+  --tds-core-font-size-scaled-5-5x: 88px;
+  --tds-core-font-size-scaled-6x: 96px;
+  --tds-core-font-size-scaled-base: 0.16px;
+  --tds-core-font-letter-spacing-negative: -0.16px; /** extra small letter spacing unit */
+  --tds-core-font-letter-spacing-none: 0; /** small letter spacing unit */
+  --tds-core-font-letter-spacing-subtle: 0.08px; /** medium letter spacing unit */
+  --tds-core-font-letter-spacing-strong: 0.16px; /** large letter spacing unit */
+  --tds-core-text-case-none: none; /** default text case of none */
+  --tds-core-text-case-upper: uppercase; /** paragraph style for uppercase  */
+  --tds-core-text-decoration-none: none; /** text decoration of none */
+  --tds-core-text-decoration-underline: underline; /** Text decoration for displaying textlinks */
+  --tds-core-line-height-small: 1.1;
+  --tds-core-line-height-medium: 1.3;
+  --tds-core-line-height-large: 1.5;
+  /**
+   * Background color for body and cropped assets backgrounds (e.g the product cards)
+   * 
+   */
+  --tds-color-background-canvas: #f4f1ed;
+  --tds-color-background-canvas-muted: #f4f1ed66; /** Background color for cropped assets inside cards, for example: .ProductCardImage */
+  --tds-color-background-canvas-overlay: linear-gradient(180deg, #F4F1ED00 0%, #F4F1EDF2 47.38%);
+  --tds-color-background-surface-medium: #ffffff; /** backgroung color for surfaces, layouts and graphic elements that are on top of canvas color (e.g layout cards) */
+  --tds-color-background-surface-subtle: #f4f1eda3; /** backgroung color for surfaces on top of white backgrounds, layouts and graphic elements (e.g background for cropped assets and informational containers) */
+  --tds-color-background-surface-opaque: #0606063d; /** backgroung color for surfaces on top of white backgrounds, layouts and graphic elements (e.g background for cropped assets and informational containers) */
+  --tds-color-foreground-default: #333333; /** Default text color, used for headlines */
+  --tds-color-foreground-medium: #5f5b56; /** Text color in medium weight. Used for body text */
+  --tds-color-foreground-subtle: #7e766b; /** Text color in subtle weight. Used for low emphasis text such as labels and icons */
+  --tds-color-foreground-rainbow: linear-gradient(90deg, #FFAE00 0%, #FF8888 15%, #FF85C7 31%, #E372FF 47%, #AFA1FF 65%, #7ACAFF 79%, #3AE3B1 100%); /** Rainbow color for foreground elements (e.g ProgressButton-Bar) */
+  --tds-color-foreground-brand: #d2000f; /** Text color in brand color. Used for high emphasis elements and text such as reduced price copy and the tonies logo  */
+  --tds-color-foreground-brand-accent: #f23b44; /** Text color in brand color. Used for high emphasis elements and text such as reduced price copy and the tonies logo  */
+  --tds-color-element-primary-default: #d2000f; /** background default color for primary interactive elements (e.g buttons) */
+  /**
+   * Background hover color for primary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-primary-hover: #a0000b;
+  /**
+   * Background active color for primary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-primary-active: #6d0008;
+  --tds-color-element-primary-on-primary: #ffffff; /** color for elements (i.e text and icons) that are placed on primary background  */
+  --tds-color-element-primary-accent-default: linear-gradient(90deg, #FF8902 0%, #FF4F30 23%, #FF3D87 42%, #CC30E1 61%, #735BFF 76%, #09F 98%, #00A7BD 100%); /** background default color for primary accent interactive elements (e.g buttons) */
+  /**
+   * Background hover color for primary accent interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-primary-accent-hover: linear-gradient(90deg, #FF8902 0%, #FF4F30 26%, #FF3D87 58%, #CC30E1 80%, #735BFF 94%);
+  /**
+   * Background active color for primary accent interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-primary-accent-active: linear-gradient(90deg, #FF4F30 0%, #FF3D87 36%, #CC30E1 48%, #735BFF 76%);
+  --tds-color-element-primary-accent-on-primary-accent: #ffffff; /** color for elements (i.e text and icons) that are placed on primary accent background */
+  --tds-color-element-secondary-default: #0000; /** background default color for secondary interactive elements (e.g buttons) */
+  /**
+   * Background hover color for secondary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-secondary-hover: #d2000f1f;
+  /**
+   * Background active color for secondary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-secondary-active: #d2000f3d;
+  --tds-color-element-secondary-on-secondary: #d2000f; /** color for elements (i.e text and icons) that are placed on secondary background */
+  --tds-color-element-tertiary-default: #0000; /** background default color for tertiary interactive elements (e.g buttons and .Tab) */
+  /**
+   * Background hover color for tertiary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-tertiary-hover: #8f8f8f1f;
+  /**
+   * Background active color for tertiary interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   */
+  --tds-color-element-tertiary-active: #8f8f8f3d;
+  --tds-color-element-tertiary-on-tertiary: #333333; /** color for elements (i.e text and icons) that are placed on tertiary background */
+  --tds-color-element-tertiary-on-tertiary-contrast: #ffffff; /** Color for elements (i.e text and icons) that are placed on tertiary background. The color will not change when switching modes since it is intended to work on a darker background. */
+  --tds-color-element-tertiary-on-tertiary-hover: #d2000f; /** Hover color for elements (i.e text and icons) that are placed on tertiary background. For example, the text on hover on the .MenuItemText and .Tab */
+  --tds-color-element-tertiary-accent-default: #0000; /** background default color for tertiary accent interactive elements (e.g buttons) */
+  /**
+   * Background hover color for tertiary accent interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   * 
+   */
+  --tds-color-element-tertiary-accent-hover: #d2000f1f;
+  /**
+   * Background active color for tertiary accent interactive elements (e.g buttons)
+   * 
+   * * This color references the primary defualt interaction color and adds a modifier on it to make it darker.
+   * 
+   */
+  --tds-color-element-tertiary-accent-active: #d2000f3d;
+  --tds-color-element-tertiary-accent-on-tertiary-accent: #d2000f; /** color for elements (i.e text and icons) that are placed on tertiary accent background */
+  /**
+   * background default color for tertiary overlay interactive elements (e.g buttons)
+   * 
+   * This color is often used as an ovelay on graphic elements like photos or other detailed assets.
+   */
+  --tds-color-element-tertiary-overlay-default: #ffffffeb;
+  /**
+   * Background hover color for tertiary overlay interactive elements (e.g buttons)
+   * 
+   */
+  --tds-color-element-tertiary-overlay-hover: #fffc;
+  /**
+   * Background active color for tertiary overlay interactive elements (e.g buttons)
+   * 
+   */
+  --tds-color-element-tertiary-overlay-active: #fff;
+  --tds-color-element-tertiary-overlay-on-tertiary-overlay: #333333; /** color for elements (i.e text and icons) that are placed on tertiary overlay background */
+  --tds-color-element-selected-neutral-default: #0000; /** background color for selected elements (e.g .Tab) */
+  --tds-color-element-selected-neutral-hover: #ebebeb; /** Background hover color for selected elements  */
+  --tds-color-element-selected-neutral-active: #e0e0e0; /** background color for selected elements  */
+  --tds-color-element-selected-neutral-on-selected-neutral: #d2000f; /** color for elements (i.e text and icons) that are placed on selected background. For exmaple: .MenuItemText */
+  --tds-color-element-selected-primary-default: #f5cccc59; /** background primary color for selected elements (e.g .ToggleBar) */
+  --tds-color-element-selected-primary-hover: #f5ccccd6; /** Background hover primary color for selected elements  */
+  --tds-color-element-selected-primary-active: #f08f92b8; /** Background active primary color for selected elements  */
+  --tds-color-element-selected-primary-on-selected-primary: #d2000f; /** color for elements (i.e text and icons) that are placed on selected background */
+  --tds-color-element-selected-control-default: #1a7125; /** background control color for selected elements (e.g Checkbox, Radio, Switch) */
+  --tds-color-element-selected-control-hover: #1a551f; /** Background hover control color for selected elements  */
+  --tds-color-element-selected-control-active: #19441b; /** Background active control color for selected elements  */
+  --tds-color-element-selected-control-on-selected-control: #ffffff; /** color for elements (i.e text and icons) that are placed on selected control background */
+  --tds-color-element-input-default: #fffc; /** background default color for input elements. e.g input fields, checkboxes and radio */
+  --tds-color-element-input-hover: #8f8f8f1f; /** Background hover color for input elements */
+  --tds-color-element-input-active: #8f8f8f5c; /** Background active color for input elements */
+  --tds-color-element-input-on-input: #333333; /** color for elements (i.e text and icons) that are placed on input elements */
+  --tds-color-element-input-on-input-muted: #5f5b56; /** Muted color for elements (i.e text and icons) that are placed on input elements */
+  --tds-color-element-input-accent-default: #7e766b; /** Accent background default color for input elements. e.g Switch */
+  --tds-color-element-input-accent-hover: #5f5b56; /** Background hover accent color for input elements */
+  --tds-color-element-input-accent-active: #474544; /** Background active accent color for input elements */
+  --tds-color-element-input-accent-on-input: #f4f1ed; /** color for elements (i.e text and icons) that are placed on input accent elements */
+  --tds-color-element-purpose-neutral-default: #f4f1ed; /** Background color for elements with neutral purpose (e.g., .FilterTag) */
+  --tds-color-element-purpose-neutral-hover: #e4e1dd; /** Background hover color for elements with neutral purpose  */
+  --tds-color-element-purpose-neutral-active: #d3d1cd; /** Background active color for elements with neutral purpose  */
+  --tds-color-element-purpose-neutral-on-neutral: #333333; /** color for elements (i.e text and icons) that are placed on neutral backgrounds */
+  --tds-color-element-purpose-info-default: #cde9f3; /** background color for elements with informational purpose of low emphasis (e.g Toast and InfoMessage) */
+  --tds-color-element-purpose-info-hover: #bbd4dd; /** background hover color for elements with informational purpose of low emphasis */
+  --tds-color-element-purpose-info-active: #b2cad2; /** background active color for elements with informational purpose of low emphasis */
+  --tds-color-element-purpose-info-on-info: #232d7b; /** color for elements that are palced on informational purpose backgrounds */
+  --tds-color-element-purpose-success-default: #d7e8ca; /** background color for elements with success purpose of low emphasis (e.g Toast and InfoMessage) */
+  --tds-color-element-purpose-success-hover: #c4d3b8; /** background hover color for elements with success purpose of high emphasis */
+  --tds-color-element-purpose-success-active: #bac9af; /** background active color for elements with success purpose of high emphasis */
+  --tds-color-element-purpose-success-on-success: #1a7125; /** color for elements placed on success purpose background */
+  --tds-color-element-purpose-warning-default: #ffe8b2; /** background color for elements with warning purpose of low emphasis (e.g Toast and InfoMessage) */
+  --tds-color-element-purpose-warning-hover: #e8d3a2; /** background hover color for elements with warning purpose of high emphasis */
+  --tds-color-element-purpose-warning-active: #ddc99b; /** background active color for elements with warning purpose of high emphasis */
+  --tds-color-element-purpose-warning-on-warning: #a34500; /** color for elements placed on warning purpose background */
+  --tds-color-element-purpose-error-default: #f5cccc; /** background color for elements with critical purpose of low emphasis (e.g Toast and InfoMessage and .Indicator) */
+  --tds-color-element-purpose-error-hover: #dfbaba; /** background hover color for elements with critical purpose of high emphasis */
+  --tds-color-element-purpose-error-active: #d4b1b1; /** background active color for elements with critical purpose of high emphasis */
+  --tds-color-element-purpose-error-on-error: #a10a11; /** color for elements placed on critical purpose background */
+  --tds-color-element-purpose-brand-info-default: #d2000f; /** Background color for elements with brand informational purpose (e.g badge) */
+  --tds-color-element-purpose-brand-info-on-brand-info: #ffffff; /** color for elements placed on brand informational background. (e.g  */
+  --tds-color-element-purpose-xmas-default: #3d823e;
+  --tds-color-element-purpose-xmas-hover: #327c36;
+  --tds-color-element-purpose-xmas-active: #1a7125;
+  --tds-color-element-purpose-xmas-on-xmas: #ffffff;
+  --tds-color-element-purpose-black-friday-default: #262626;
+  --tds-color-element-purpose-black-friday-hover: #353535;
+  --tds-color-element-purpose-black-friday-active: #3c3c3c;
+  --tds-color-element-purpose-black-friday-on-black-friday: #ebebeb;
+  --tds-color-element-purpose-flash-sale-default: #6a2181;
+  --tds-color-element-purpose-flash-sale-hover: #e2d1e5;
+  --tds-color-element-purpose-flash-sale-active: #7d3d90;
+  --tds-color-element-purpose-flash-sale-on-flash-sale: #ebebeb;
+  --tds-color-element-category-sing-and-dance-default: #0000; /** background color for elements with sing-and-dance theming (e.g Tags, Badge) */
+  --tds-color-element-category-sing-and-dance-hover: #ec770014; /** background hover color for elements with sing-and-dance theming */
+  --tds-color-element-category-sing-and-dance-active: #ec77003d; /** background active color for elements with sing-and-dance theming */
+  --tds-color-element-category-sing-and-dance-on-sing-and-dance: #ad5700; /** color for elements (i.e text and icons) that are placed on sing-and-dance backgrounds */
+  --tds-color-element-category-story-time-default: #0000; /** background color for elements with story-time theming (e.g Tags, Badge) */
+  --tds-color-element-category-story-time-hover: #2a7dea14; /** background hover color for elements with story-time theming */
+  --tds-color-element-category-story-time-active: #2a7dea3d; /** background active color for elements with story-time theming */
+  --tds-color-element-category-story-time-on-story-time: #1568d5; /** color for elements (i.e text and icons) that are placed on story-time backgrounds */
+  --tds-color-element-category-adventure-default: #0000; /** background color for elements with adventure theming (e.g Tags, Badge) */
+  --tds-color-element-category-adventure-hover: #f5a70014; /** background hover color for elements with adventure theming */
+  --tds-color-element-category-adventure-active: #f5a7003d; /** background active color for elements with adventure theming */
+  --tds-color-element-category-adventure-on-adventure: #946500; /** color for elements (i.e text and icons) that are placed on adventure backgrounds */
+  --tds-color-element-category-sleep-default: #0000; /** background color for elements with sleep theming (e.g Tags, Badge) */
+  --tds-color-element-category-sleep-hover: #ad95e314; /** background hover color for elements with sleep theming */
+  --tds-color-element-category-sleep-active: #ad95e33d; /** background active color for elements with sleep theming */
+  --tds-color-element-category-sleep-on-sleep: #7b56d2; /** color for elements (i.e text and icons) that are placed on sleep backgrounds */
+  --tds-color-element-category-mindfulness-default: #0000; /** background color for elements with sleep mindfulness (e.g Tags, Badge) */
+  --tds-color-element-category-mindfulness-hover: #79a6c214; /** background hover color for elements with mindfulness theming */
+  --tds-color-element-category-mindfulness-active: #79a6c23d; /** background active color for elements with mindfulness theming */
+  --tds-color-element-category-mindfulness-on-mindfulness: #42728f; /** color for elements (i.e text and icons) that are placed on mindfulness backgrounds */
+  --tds-color-element-category-learn-default: #0000; /** background color for elements with sleep learn (e.g Tags, Badge) */
+  --tds-color-element-category-learn-hover: #1f702714; /** background hover color for elements with learn theming */
+  --tds-color-element-category-learn-active: #1f70273d; /** background active color for elements with learn theming */
+  --tds-color-element-category-learn-on-learn: #1f7027; /** color for elements (i.e text and icons) that are placed on learn backgrounds */
+  --tds-color-element-category-black-friday-default: #262626;
+  --tds-color-element-category-black-friday-hover: #353535;
+  --tds-color-element-category-black-friday-active: #3c3c3c;
+  --tds-color-element-category-black-friday-on-black-friday: #f4f4f4;
+  --tds-color-element-category-xmas-default: #3d823e;
+  --tds-color-element-category-xmas-hover: #327c36;
+  --tds-color-element-category-xmas-active: #1a7125;
+  --tds-color-element-category-xmas-on-xmas: #ffffff;
+  --tds-color-element-disabled-default: #e0e0e0; /** background color for disabled elements */
+  --tds-color-element-disabled-on-disabled: #8f8f8f; /** color for elements (i.e text and icons) that are placed on disabled background */
+  /**
+   * Trasnparent border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-transparent: #0000;
+  /**
+   * light border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-light: #f4f1ed;
+  /**
+   * subtle border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-subtle: #e2dbd2;
+  /**
+   * medium border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-medium: #33333329;
+  /**
+   * Accessible border with a contrast of 3:1 against canvas background. Used primarily for input fields.
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-heavy: #7e766bd6;
+  /**
+   * primary border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-primary: #f23b44;
+  /**
+   * selected border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-selected: #d2000f;
+  /**
+   * error border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-error: #a10a11;
+  /**
+   * warning border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-warning: #a34500;
+  /**
+   * success border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-success: #1a7125;
+  /**
+   * rainbow border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-rainbow: linear-gradient(90deg, #FFAE00 0%, #FF8888 15%, #FF85C7 31%, #E372FF 47%, #AFA1FF 65%, #7ACAFF 79%, #3AE3B1 100%);
+  /**
+   * sing-and-dance border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-sing-and-dance: #ec7700;
+  /**
+   * story-time border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-story-time: #2a7dea;
+  /**
+   * adventure border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-adventure: #f5a700;
+  /**
+   * sleep border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-sleep: #ad95e3;
+  /**
+   * learn border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-learn: #1f7027;
+  /**
+   * mindfulness border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-mindfulness: #79a6c2;
+  /**
+   * disabled border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-disabled: #c2c2c2;
+  /**
+   * focus border color
+   * 
+   * ❌ this is token is not to be used directly. It is referenced in the composite border token set for theming purposes
+   */
+  --tds-color-border-focus: #0099ff;
+  --tds-color-box-shadow-box-shadow-color01: #00000014;
+  --tds-color-box-shadow-box-shadow-color02: #0000001f;
+  --tds-color-box-shadow-box-shadow-color03: #0000007a;
+  --tds-color-scrim-default: #3535353d; /** Default background scrim color. e.g to be used behind modals, popus, drawers */
+  --tds-color-scrim-gradient: linear-gradient(0deg, rgba(51,51,51,1.0) 0.0%, rgba(51,51,51,0.44) 55.5%, rgba(51,51,51,0.18) 81.8%, rgba(51,51,51,0.06) 94.1%, rgba(51,51,51,0.0) 100.0%); /** Gradient background vertical bottom-to-top scrim color. to be used on top of media elements and behind elements with higher contrast such as the VideoPlayer */
+  --tds-color-scrim-gradient-backdrop-text: linear-gradient(0deg, rgba(51,51,51,0) 38.12%, rgba(51,51,51,0.7) 99.17%); /** Gradient background vertical top-to-bottom scrim color. to be used on top of media elements and behind elements with higher contrast such as the mediacard */
+  --tds-color-scrim-on-scrim: #ffffff; /** text color on scrim background */
+  --tds-color-mask-overflow-left: linear-gradient(270deg, #FFF 84.46%, rgba(255, 255, 255, 0.00) 96.94%);;
+  --tds-color-mask-overflow-right: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 2.59%, #FFF 13.16%);;
+  --tds-color-mask-overflow-left-right: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 25%, #FFF 75%, rgba(255, 255, 255, 0.00) 100%);;
+  --tds-sizing-viewport-breakpoints-576: 576px; /** Fixed width breakpoints for various screen sizes */
+  --tds-sizing-viewport-breakpoints-768: 768px;
+  --tds-sizing-viewport-breakpoints-1024: 1024px;
+  --tds-sizing-viewport-breakpoints-1200: 1200px;
+  --tds-sizing-viewport-breakpoints-1400: 1400px;
+  --tds-sizing-viewport-breakpoints-1728: 1728px;
+  --tds-spacing-container-none: 0; /** Spacing scale for all elements (implicit grids), based on core.dimesion tokens. to be used within component containers and also between elements on any layout. */
+  --tds-spacing-container-0-12x: 2px;
+  --tds-spacing-container-0-19x: 3px;
+  --tds-spacing-container-0-25x: 4px;
+  --tds-spacing-container-0-37x: 6px;
+  --tds-spacing-container-0-5x: 8px;
+  --tds-spacing-container-0-63x: 10px;
+  --tds-spacing-container-0-75x: 12px;
+  --tds-spacing-container-0-88x: 14px;
+  --tds-spacing-container-1x: 16px;
+  --tds-spacing-container-1-25x: 20px;
+  --tds-spacing-container-1-5x: 24px;
+  --tds-spacing-container-2x: 32px;
+  --tds-spacing-container-2-25x: 36px;
+  --tds-spacing-container-2-5x: 40px;
+  --tds-spacing-container-3x: 48px;
+  --tds-spacing-container-auto: AUTO;
+  --tds-spacing-page-margin-none: 0; /** Spacing scale for page margins (according to the various breakpoints). */
+  --tds-spacing-page-margin-1x: 16px;
+  --tds-spacing-page-margin-1-5x: 24px;
+  --tds-spacing-page-margin-2x: 32px;
+  --tds-spacing-page-margin-3x: 48px;
+  --tds-spacing-page-padding-none: 0; /** Spacing scale for page gutter (according to the various breakpoints). */
+  --tds-spacing-page-padding-0-25x: 4px;
+  --tds-spacing-page-padding-0-5x: 8px;
+  --tds-spacing-page-padding-1x: 16px;
+  --tds-spacing-page-padding-2x: 32px;
+  --tds-spacing-page-padding-4x: 64px;
+  --tds-spacing-page-padding-8x: 128px;
+  --tds-spacing-page-padding-16x: 256px;
+  --tds-dimension-element-width-0-75x: 12px;
+  --tds-dimension-element-width-1x: 16px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-1-25x: 20px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-1-5x: 24px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-1-75x: 28px;
+  --tds-dimension-element-width-2x: 32px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-2-25x: 36px;
+  --tds-dimension-element-width-2-5x: 40px;
+  --tds-dimension-element-width-2-75x: 44px;
+  --tds-dimension-element-width-3-25x: 52px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-4-5x: 72px;
+  --tds-dimension-element-width-6x: 96px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-9x: 144px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-10x: 160px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-width-12x: 192px;
+  --tds-dimension-element-min-width-1x: 16px;
+  --tds-dimension-element-min-width-1-13x: 18px;
+  --tds-dimension-element-min-width-1-25x: 20px;
+  --tds-dimension-element-min-width-2x: 32px;
+  --tds-dimension-element-min-width-3x: 48px;
+  --tds-dimension-element-min-width-4x: 64px;
+  --tds-dimension-element-min-width-6x: 96px;
+  --tds-dimension-element-min-width-9x: 144px;
+  --tds-dimension-element-min-width-11x: 176px;
+  --tds-dimension-element-min-width-13x: 208px;
+  --tds-dimension-element-min-width-16x: 256px;
+  --tds-dimension-element-min-width-17-5x: 280px;
+  --tds-dimension-element-min-width-20x: 320px;
+  --tds-dimension-element-min-width-21x: 336px;
+  --tds-dimension-element-min-width-24x: 384px;
+  --tds-dimension-element-min-width-26x: 416px;
+  --tds-dimension-element-min-width-32x: 512px;
+  --tds-dimension-element-min-width-61-5x: 984px;
+  --tds-dimension-element-min-width-75x: 1200px;
+  --tds-dimension-element-max-width-10x: 160px;
+  --tds-dimension-element-max-width-13x: 208px;
+  --tds-dimension-element-max-width-16x: 256px;
+  --tds-dimension-element-max-width-17-5x: 280px;
+  --tds-dimension-element-max-width-20x: 320px;
+  --tds-dimension-element-max-width-24x: 384px;
+  --tds-dimension-element-max-width-26x: 416px;
+  --tds-dimension-element-max-width-32x: 512px;
+  --tds-dimension-element-max-width-47-5x: 760px;
+  --tds-dimension-element-max-width-70x: 1120px;
+  --tds-dimension-element-max-width-75x: 1200px;
+  --tds-dimension-element-max-width-84x: 1344px;
+  --tds-dimension-element-height-0-12x: 2px;
+  --tds-dimension-element-height-0-25x: 4px;
+  --tds-dimension-element-height-0-37x: 6px;
+  --tds-dimension-element-height-0-5x: 8px;
+  --tds-dimension-element-height-0-63x: 10px;
+  --tds-dimension-element-height-0-75x: 12px;
+  --tds-dimension-element-height-0-88x: 14px;
+  --tds-dimension-element-height-1x: 16px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-1-13x: 18px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-1-25x: 20px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-1-5x: 24px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-1-75x: 28px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-2x: 32px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-2-25x: 36px;
+  --tds-dimension-element-height-2-5x: 40px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-2-75x: 44px;
+  --tds-dimension-element-height-3x: 48px; /** Fixed sizing token to be used on any non-interactive element that has a fixed height value (e.g badges). */
+  --tds-dimension-element-height-3-25x: 52px;
+  --tds-dimension-element-height-3-5x: 56px;
+  --tds-dimension-element-height-3-75x: 60px;
+  --tds-dimension-element-height-4x: 64px;
+  --tds-dimension-element-height-4-5x: 72px;
+  --tds-dimension-element-height-6x: 96px;
+  --tds-dimension-element-height-10x: 160px;
+  --tds-dimension-element-height-11x: 176px;
+  --tds-dimension-element-height-12x: 192px;
+  --tds-dimension-element-min-height-0-9x: 14px;
+  --tds-dimension-element-min-height-1x: 16px;
+  --tds-dimension-element-min-height-1-25x: 20px;
+  --tds-dimension-element-min-height-1-5x: 24px;
+  --tds-dimension-element-min-height-1-75x: 28px;
+  --tds-dimension-element-min-height-2-25x: 36px;
+  --tds-dimension-element-min-height-2x: 32px;
+  --tds-dimension-element-min-height-2-5x: 40px;
+  --tds-dimension-element-min-height-3x: 48px;
+  --tds-dimension-element-min-height-3-25x: 52px;
+  --tds-dimension-element-min-height-3-5x: 56px;
+  --tds-dimension-element-min-height-3-75-x: 60px;
+  --tds-dimension-element-min-height-5x: 80px;
+  --tds-dimension-element-min-height-5-75x: 92px;
+  --tds-dimension-element-min-height-7-75x: 124px;
+  --tds-dimension-element-min-height-10x: 160px;
+  --tds-dimension-element-min-height-32x: 512px;
+  --tds-dimension-element-min-height-4x: 64px;
+  --tds-dimension-element-max-height-10x: 160px;
+  --tds-dimension-input-height-3x: 48px; /** Fixed sizing token to be used on input element which have a fixed height value (e.g  ) */
+  --tds-dimension-icon-0-75x: 12px;
+  --tds-dimension-icon-1x: 16px;
+  --tds-dimension-icon-1-25x: 20px;
+  --tds-dimension-icon-1-5x: 24px;
+  --tds-dimension-icon-1-75x: 28px;
+  --tds-dimension-icon-2-25x: 36px;
+  --tds-size-icon-xlarge-width: 36px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-xlarge-height: 36px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-large-width: 28px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-large-height: 28px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-medium-width: 24px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-medium-height: 24px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-small-width: 20px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-small-height: 20px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-xsmall-width: 16px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-xsmall-height: 16px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-2xsmall-width: 12px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-size-icon-2xsmall-height: 12px; /** Size token to define height and width of the IconContainer. Change reference tokens in Dimensions to influence this. */
+  --tds-elevation-subtle-1-blur: 12px;
+  --tds-elevation-subtle-1-spread: 0;
+  --tds-elevation-subtle-1-color: #0000001f;
+  --tds-elevation-subtle-1-type: dropShadow;
+  --tds-elevation-subtle-1-offset-x: 0;
+  --tds-elevation-subtle-1-offset-y: 0;
+  --tds-elevation-subtle-2-blur: 1px;
+  --tds-elevation-subtle-2-spread: 0;
+  --tds-elevation-subtle-2-color: #00000014;
+  --tds-elevation-subtle-2-type: dropShadow;
+  --tds-elevation-subtle-2-offset-x: 0;
+  --tds-elevation-subtle-2-offset-y: 0;
+  --tds-elevation-heavy-1-blur: 4px;
+  --tds-elevation-heavy-1-spread: 0;
+  --tds-elevation-heavy-1-color: #0000007a;
+  --tds-elevation-heavy-1-type: dropShadow;
+  --tds-elevation-heavy-1-offset-x: 0;
+  --tds-elevation-heavy-1-offset-y: 0;
+  --tds-elevation-heavy-2-blur: 16px;
+  --tds-elevation-heavy-2-spread: 0;
+  --tds-elevation-heavy-2-color: #0000001f;
+  --tds-elevation-heavy-2-type: dropShadow;
+  --tds-elevation-heavy-2-offset-x: 0;
+  --tds-elevation-heavy-2-offset-y: 2px;
+  --tds-elevation-heavy-3-blur: 2px;
+  --tds-elevation-heavy-3-spread: 0;
+  --tds-elevation-heavy-3-color: #00000014;
+  --tds-elevation-heavy-3-type: dropShadow;
+  --tds-elevation-heavy-3-offset-x: 0;
+  --tds-elevation-heavy-3-offset-y: 0;
+  --tds-elevation-heavy-right-1-blur: 20px;
+  --tds-elevation-heavy-right-1-spread: 0;
+  --tds-elevation-heavy-right-1-color: #00000014;
+  --tds-elevation-heavy-right-1-type: dropShadow;
+  --tds-elevation-heavy-right-1-offset-x: 12px;
+  --tds-elevation-heavy-right-1-offset-y: 0;
+  --tds-elevation-heavy-right-2-blur: 4px;
+  --tds-elevation-heavy-right-2-spread: 0;
+  --tds-elevation-heavy-right-2-color: #0000001f;
+  --tds-elevation-heavy-right-2-type: dropShadow;
+  --tds-elevation-heavy-right-2-offset-x: 2px;
+  --tds-elevation-heavy-right-2-offset-y: 0;
+  --tds-border-radius-container-none: 0; /** Border radius scaling system based on core.dimension tokens */
+  --tds-border-radius-container-0-12x: 2px;
+  --tds-border-radius-container-0-25x: 4px;
+  --tds-border-radius-container-0-37x: 6px;
+  --tds-border-radius-container-0-50x: 8px;
+  --tds-border-radius-container-0-63x: 10px;
+  --tds-border-radius-container-0-75x: 12px;
+  --tds-border-radius-container-1x: 16px;
+  --tds-border-radius-container-1-12x: 18px;
+  --tds-border-radius-container-1-25x: 20px;
+  --tds-border-radius-container-1-50x: 24px;
+  --tds-border-radius-container-1-75x: 28px;
+  --tds-border-radius-container-2x: 32px;
+  --tds-border-radius-container-2-25x: 36px;
+  --tds-border-radius-container-3x: 48px;
+  --tds-border-radius-container-4x: 64px;
+  --tds-border-radius-container-6x: 96px;
+  --tds-border-radius-container-pill: 384px;
+  --tds-border-radius-focus-0-44x: 7px; /** Focus radius to be used around elements with 6dp border radius. */
+  --tds-border-radius-focus-0-69x: 11px;
+  --tds-border-radius-focus-0-81x: 13px;
+  --tds-border-radius-focus-1-19x: 19px;
+  --tds-border-radius-focus-pill: 384px;
+  --tds-border-width-base-none: 0; /** Border width scaling system based on core.dimension tokens */
+  --tds-border-width-base-s: 1px;
+  --tds-border-width-base-m: 2px;
+  --tds-border-width-icon-stroke-s: 1.75px; /** Icon stroke width system  */
+  --tds-border-width-icon-stroke-m: 2px;
+  --tds-border-width-icon-stroke-l: 2.25px;
+  /**
+   * A composite token border system to be applied on any interactive component or element wich has a border (e.g buttons, inputs)
+   * This is a synamic ssystem that will change according to the selected theme:
+   * The color token is a dynamic variable but the width and style are the same across all themes.
+   */
+  --tds-border-action-transparent-color: #0000;
+  /**
+   * A composite token border system to be applied on any interactive component or element wich has a border (e.g buttons, inputs)
+   * This is a synamic ssystem that will change according to the selected theme:
+   * The color token is a dynamic variable but the width and style are the same across all themes.
+   */
+  --tds-border-action-transparent-width: 2px;
+  /**
+   * A composite token border system to be applied on any interactive component or element wich has a border (e.g buttons, inputs)
+   * This is a synamic ssystem that will change according to the selected theme:
+   * The color token is a dynamic variable but the width and style are the same across all themes.
+   */
+  --tds-border-action-transparent-style: solid;
+  --tds-border-action-subtle-color: #33333329;
+  --tds-border-action-subtle-width: 1px;
+  --tds-border-action-subtle-style: solid;
+  --tds-border-action-selected-color: #d2000f;
+  --tds-border-action-selected-width: 2px;
+  --tds-border-action-selected-style: solid;
+  --tds-border-action-selected-subtle-color: #d2000f;
+  --tds-border-action-selected-subtle-width: 1px;
+  --tds-border-action-selected-subtle-style: solid;
+  --tds-border-action-disabled-color: #c2c2c2;
+  --tds-border-action-disabled-width: 2px;
+  --tds-border-action-disabled-style: solid;
+  --tds-border-action-disabled-subtle-color: #c2c2c2;
+  --tds-border-action-disabled-subtle-width: 1px;
+  --tds-border-action-disabled-subtle-style: solid;
+  --tds-border-action-focused-color: #0099ff;
+  --tds-border-action-focused-width: 2px;
+  --tds-border-action-focused-style: solid;
+  --tds-border-action-success-color: #1a7125;
+  --tds-border-action-success-width: 1px;
+  --tds-border-action-success-style: solid;
+  --tds-border-action-error-color: #a10a11;
+  --tds-border-action-error-width: 1px;
+  --tds-border-action-error-style: solid;
+  --tds-border-action-brand-color: #f23b44;
+  --tds-border-action-brand-width: 2px;
+  --tds-border-action-brand-style: solid;
+  --tds-border-action-input-color: #7e766bd6;
+  --tds-border-action-input-width: 1px;
+  --tds-border-action-input-style: solid;
+  --tds-border-action-rainbow-color: linear-gradient(90deg, #FFAE00 0%, #FF8888 15%, #FF85C7 31%, #E372FF 47%, #AFA1FF 65%, #7ACAFF 79%, #3AE3B1 100%);
+  --tds-border-action-rainbow-width: 2px;
+  --tds-border-action-rainbow-style: solid;
+  /**
+   * A composite token border system to be applied on any layout wich has a border (e.g dividers)
+   * This is a synamic ssystem that will change according to the selected theme
+   */
+  --tds-border-base-light-color: #f4f1ed;
+  /**
+   * A composite token border system to be applied on any layout wich has a border (e.g dividers)
+   * This is a synamic ssystem that will change according to the selected theme
+   */
+  --tds-border-base-light-width: 0px;
+  /**
+   * A composite token border system to be applied on any layout wich has a border (e.g dividers)
+   * This is a synamic ssystem that will change according to the selected theme
+   */
+  --tds-border-base-light-style: solid;
+  --tds-border-base-subtle-color: #e2dbd2;
+  --tds-border-base-subtle-width: 1px;
+  --tds-border-base-subtle-style: solid;
+  --tds-border-base-medium-color: #33333329;
+  --tds-border-base-medium-width: 1px;
+  --tds-border-base-medium-style: solid;
+  --tds-border-base-heavy-color: #7e766bd6;
+  --tds-border-base-heavy-width: 1px;
+  --tds-border-base-heavy-style: solid;
+  --tds-border-divider-slim-color: #e2dbd2;
+  --tds-border-divider-slim-width: 1px;
+  --tds-border-divider-slim-style: solid;
+  --tds-border-divider-thick-color: #e2dbd2;
+  --tds-border-divider-thick-width: 2px;
+  --tds-border-divider-thick-style: solid;
+  --tds-border-category-sing-and-dance-color: #ec7700;
+  --tds-border-category-sing-and-dance-width: 1px;
+  --tds-border-category-sing-and-dance-style: solid;
+  --tds-border-category-story-time-color: #2a7dea;
+  --tds-border-category-story-time-width: 1px;
+  --tds-border-category-story-time-style: solid;
+  --tds-border-category-adventure-color: #f5a700;
+  --tds-border-category-adventure-width: 1px;
+  --tds-border-category-adventure-style: solid;
+  --tds-border-category-sleep-color: #ad95e3;
+  --tds-border-category-sleep-width: 1px;
+  --tds-border-category-sleep-style: solid;
+  --tds-border-category-mindfulness-color: #79a6c2;
+  --tds-border-category-mindfulness-width: 1px;
+  --tds-border-category-mindfulness-style: solid;
+  --tds-border-category-learn-color: #1f7027;
+  --tds-border-category-learn-width: 1px;
+  --tds-border-category-learn-style: solid;
+  --tds-typography-display-bold-3xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-3xl-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-3xl-font-size: 40px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-3xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-4xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-4xl-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-4xl-font-size: 48px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-4xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-5xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-5xl-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-5xl-font-size: 52px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-bold-5xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-3xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-3xl-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-3xl-font-size: 40px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-3xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-4xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-4xl-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-4xl-font-size: 48px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-4xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-5xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-5xl-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-5xl-font-size: 52px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-semibold-5xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-3xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-3xl-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-3xl-font-size: 40px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-3xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-4xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-4xl-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-4xl-font-size: 48px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-4xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-5xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-5xl-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-5xl-font-size: 52px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-display-medium-5xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-s-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-s-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-s-font-size: 14px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-s-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-sm-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-sm-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-sm-font-size: 16px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-sm-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-ml-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-ml-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-ml-font-size: 20px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-ml-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-l-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-l-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-l-font-size: 24px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-l-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xl-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xl-font-size: 32px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xxl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xxl-font-weight: 700; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xxl-font-size: 36px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-bold-xxl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-s-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-s-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-s-font-size: 14px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-s-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-sm-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-sm-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-sm-font-size: 16px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-sm-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-ml-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-ml-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-ml-font-size: 20px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-ml-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-l-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-l-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-l-font-size: 24px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-l-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xl-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xl-font-size: 32px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xxl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xxl-font-weight: 600; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xxl-font-size: 36px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-semibold-xxl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-s-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-s-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-s-font-size: 14px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-s-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-m-font-family: Wonder;
+  --tds-typography-title-medium-m-font-weight: 500;
+  --tds-typography-title-medium-m-font-size: 16px;
+  --tds-typography-title-medium-m-line-height: 1.3;
+  --tds-typography-title-medium-ml-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-ml-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-ml-font-size: 20px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-ml-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-l-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-l-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-l-font-size: 24px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-l-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xl-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xl-font-size: 32px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xxl-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xxl-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xxl-font-size: 36px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-xxl-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-sm-font-family: Wonder; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-sm-font-weight: 500; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-sm-font-size: 16px; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-title-medium-sm-line-height: 1.3; /** singleline text, used for labels on top of inputs, as titles inside components, pages or panels */
+  --tds-typography-body-medium-xxs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xxs-font-weight: 500; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xxs-font-size: 10px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xxs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xs-font-weight: 500; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xs-font-size: 12px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-xs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-s-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-s-font-weight: 500; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-s-font-size: 14px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-s-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-sm-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-sm-font-weight: 500; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-sm-font-size: 16px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-sm-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-ml-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-ml-font-weight: 500; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-ml-font-size: 20px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-medium-ml-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xxs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xxs-font-weight: 600; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xxs-font-size: 10px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xxs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xs-font-weight: 600; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xs-font-size: 12px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-xs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-s-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-s-font-weight: 600; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-s-font-size: 14px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-s-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-sm-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-sm-font-weight: 600; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-sm-font-size: 16px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-sm-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-ml-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-ml-font-weight: 600; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-ml-font-size: 20px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-semi-bold-ml-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xxs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xxs-font-weight: 700; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xxs-font-size: 10px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xxs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xs-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xs-font-weight: 700; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xs-font-size: 12px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-xs-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-s-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-s-font-weight: 700; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-s-font-size: 14px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-s-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-sm-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-sm-font-weight: 700; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-sm-font-size: 16px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-sm-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-ml-font-family: Wonder; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-ml-font-weight: 700; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-ml-font-size: 20px; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-body-bold-ml-line-height: 1.5; /** multiline text, used for paragraphes inside components, pages or panels */
+  --tds-typography-label-semibold-xxs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xxs-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xxs-font-size: 10px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xs-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xs-font-size: 12px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-s-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-s-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-s-font-size: 14px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-sm-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-sm-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-sm-font-size: 16px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-m-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-m-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-m-font-size: 18px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-ml-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-ml-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-ml-font-size: 20px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-l-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-l-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-l-font-size: 24px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xl-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xl-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-semibold-xl-font-size: 32px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xxs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xxs-font-weight: 500; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xxs-font-size: 10px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xs-font-weight: 500; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xs-font-size: 12px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-s-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-s-font-weight: 500; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-s-font-size: 14px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-sm-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-sm-font-weight: 500; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-sm-font-size: 16px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-m-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-m-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-m-font-size: 18px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-ml-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-ml-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-ml-font-size: 20px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-l-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-l-font-weight: 600; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-l-font-size: 24px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xl-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xl-font-weight: 500; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-medium-xl-font-size: 32px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xxs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xxs-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xxs-font-size: 10px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xs-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xs-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xs-font-size: 12px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-s-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-s-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-s-font-size: 14px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-sm-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-sm-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-sm-font-size: 16px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-m-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-m-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-m-font-size: 18px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-ml-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-ml-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-ml-font-size: 20px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-l-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-l-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-l-font-size: 24px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xl-font-family: Wonder; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xl-font-weight: 700; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+  --tds-typography-label-bold-xl-font-size: 32px; /** singleline text, used for button labels, breadcrumbs, chips and everything that is clickable. */
+}

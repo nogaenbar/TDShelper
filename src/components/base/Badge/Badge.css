@@ -1,0 +1,50 @@
+/**
+ * Badge Component Styles
+ * PIXEL-PERFECT from Figma design 2775:19145
+ * 
+ * Info variant:
+ * - Background: #CDE9F3 (pale blue)
+ * - Height: 20px
+ * - Padding: 0 8px
+ * - Border-radius: pill (384px)
+ * - Font: 14px semi-bold #232D7B (dark blue text)
+ */
+
+.tds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--tds-dimension-element-height-1_25x); /* 20px */
+  padding: 0 var(--tds-spacing-container-0_5x); /* 0 8px */
+  border-radius: var(--tds-borderRadius-container-pill); /* 384px */
+  font-family: var(--tds-typography-label-semibold-s-font-family);
+  font-weight: var(--tds-typography-label-semibold-s-font-weight);
+  font-size: var(--tds-typography-label-semibold-s-font-size);
+  line-height: var(--tds-typography-label-semibold-s-line-height);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Info variant: pale blue background #CDE9F3 */
+.tds-badge--info {
+  background-color: var(--tds-color-element-purpose-info-default); /* #CDE9F3 */
+  color: var(--tds-color-element-purpose-info-onInfo); /* #232D7B */
+}
+
+.tds-badge--success {
+  background-color: var(--tds-color-element-purpose-success-default);
+  color: var(--tds-color-element-purpose-success-onSuccess);
+}
+
+.tds-badge--warning {
+  background-color: var(--tds-color-element-purpose-warning-default);
+  color: var(--tds-color-element-purpose-warning-onWarning);
+}
+
+.tds-badge--error {
+  background-color: var(--tds-color-element-purpose-error-default);
+  color: var(--tds-color-element-purpose-error-onError);
+}
+
