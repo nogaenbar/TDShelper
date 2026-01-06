@@ -57,17 +57,26 @@ export function Button({
   useEffect(() => {
     if (buttonRef.current && variant === 'tertiary') {
       const computed = window.getComputedStyle(buttonRef.current);
+      const root = getComputedStyle(document.documentElement);
       // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/ae87e052-676b-4cb8-9838-128b6d5f64ee',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Button.jsx:useEffect',message:'Tertiary button border debug',data:{variant,size,disabled,computedBorderColor:computed.borderColor,computedBorderWidth:computed.borderWidth,computedBorderStyle:computed.borderStyle,transparentColorToken:'var(--tds-border-action-transparent-color)'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      fetch('http://127.0.0.1:7242/ingest/ae87e052-676b-4cb8-9838-128b6d5f64ee',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Button.jsx:useEffect',message:'Tertiary button border debug detailed',data:{variant,size,disabled,computedBorderColor:computed.borderColor,computedBorderWidth:computed.borderWidth,computedBorderStyle:computed.borderStyle,transparentColorTokenValue:root.getPropertyValue('--tds-border-action-transparent-color'),transparentWidthValue:root.getPropertyValue('--tds-border-action-transparent-width'),transparentStyleValue:root.getPropertyValue('--tds-border-action-transparent-style'),allBorderProps:{top:computed.borderTopColor,bottom:computed.borderBottomColor,left:computed.borderLeftColor,right:computed.borderRightColor}},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'A'})}).catch(()=>{});
       // #endregion
-      console.log('Tertiary Button Border Debug:', {
+      console.log('Tertiary Button Border Debug (Detailed):', {
         variant,
         size,
         disabled,
         computedBorderColor: computed.borderColor,
         computedBorderWidth: computed.borderWidth,
         computedBorderStyle: computed.borderStyle,
-        transparentColorToken: 'var(--tds-border-action-transparent-color)'
+        transparentColorTokenValue: root.getPropertyValue('--tds-border-action-transparent-color'),
+        transparentWidthValue: root.getPropertyValue('--tds-border-action-transparent-width'),
+        transparentStyleValue: root.getPropertyValue('--tds-border-action-transparent-style'),
+        allBorderColors: {
+          top: computed.borderTopColor,
+          bottom: computed.borderBottomColor,
+          left: computed.borderLeftColor,
+          right: computed.borderRightColor
+        }
       });
     }
   }, [variant, size, disabled]);

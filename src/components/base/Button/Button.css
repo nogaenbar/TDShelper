@@ -137,10 +137,8 @@
   /* label fill: tds.color.element.tertiary.onTertiary */
   color: var(--tds-color-element-tertiary-on-tertiary);
   /* border: tds.border.action.transparent */
-  /* Note: #0000 should be transparent, but if visible, the token may need adjustment */
-  border-width: var(--tds-border-action-transparent-width);
-  border-style: var(--tds-border-action-transparent-style);
-  border-color: var(--tds-border-action-transparent-color);
+  /* For truly invisible border, use border: none instead of transparent color with width */
+  border: none;
 }
 
 .tds-button--tertiary:hover:not(:disabled) {
@@ -162,9 +160,7 @@
 .tds-button--tertiary:disabled {
   background-color: var(--tds-color-element-tertiary-default);
   color: var(--tds-color-element-disabled-on-disabled);
-  border-width: var(--tds-border-action-transparent-width);
-  border-style: var(--tds-border-action-transparent-style);
-  border-color: var(--tds-border-action-transparent-color);
+  border: none;
   cursor: not-allowed;
 }
 
