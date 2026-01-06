@@ -1,0 +1,243 @@
+/**
+ * Button Component Styles
+ * All values use tokens from variables.css - no magic numbers
+ * Pixel-perfect implementation from Figma designs
+ */
+
+.tds-button {
+  /* Base styles using tokens */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: var(--tds-typography-label-semibold-sm-font-family);
+  /* font-size and font-weight are set per size class, not in base */
+  line-height: normal; /* Single-line text, no line-height needed */
+  letter-spacing: var(--tds-core-font-letterSpacing-none);
+  text-decoration: var(--tds-core-textDecoration-none);
+  text-transform: var(--tds-core-textCase-none);
+  
+  /* Default border - will be overridden by variant styles */
+  border-width: var(--tds-border-action-transparent-width);
+  border-style: var(--tds-border-action-transparent-style);
+  border-color: var(--tds-border-action-transparent-color);
+  
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Remove default button styles */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* ========== Button Sizes - Using exact Figma tokens ========== */
+
+/* Small: minHeight 2x, vertical 0.5x, horizontal 0.63x, gap 0.37x, radius 0.63x */
+.tds-button.tds-button--small,
+.tds-button--small {
+  min-height: var(--tds-dimension-element-height-2x);
+  padding: var(--tds-spacing-container-0-5x) var(--tds-spacing-container-0-63x);
+  border-radius: var(--tds-border-radius-container-0-63x);
+  font-size: var(--tds-typography-label-semibold-s-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-s-font-weight);
+}
+
+/* Medium: minHeight 2.5x, vertical 0.63x, horizontal 1x, gap 0.5x, radius 0.75x */
+.tds-button.tds-button--medium,
+.tds-button--medium {
+  min-height: var(--tds-dimension-element-height-2-5x);
+  padding: var(--tds-spacing-container-0-63x) var(--tds-spacing-container-1x);
+  border-radius: var(--tds-border-radius-container-0-75x);
+  font-size: var(--tds-typography-label-semibold-sm-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-sm-font-weight);
+}
+
+/* Large: minHeight 3.25x, vertical 0.88x, horizontal 1.5x, gap 0.63x, radius 1.12x */
+.tds-button.tds-button--large,
+.tds-button--large {
+  min-height: var(--tds-dimension-element-height-3-25x);
+  padding: var(--tds-spacing-container-0-88x) var(--tds-spacing-container-1-5x);
+  border-radius: var(--tds-border-radius-container-1-12x);
+  font-size: var(--tds-typography-label-semibold-m-font-size) !important;
+  font-weight: var(--tds-typography-label-semibold-m-font-weight);
+}
+
+/* ========== Primary Variant ========== */
+
+.tds-button--primary {
+  /* fill: tds.color.element.primary.default */
+  background-color: var(--tds-color-element-primary-default);
+  /* label fill: tds.color.element.primary.onPrimary */
+  color: var(--tds-color-element-primary-on-primary);
+  /* border: tds.border.action.transparent */
+  border-color: var(--tds-border-action-transparent-color);
+  letter-spacing: var(--tds-core-font-letterSpacing-subtle);
+}
+
+.tds-button--primary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-primary-hover);
+}
+
+.tds-button--primary:active:not(:disabled) {
+  background-color: var(--tds-color-element-primary-active);
+}
+
+.tds-button--primary:focus-visible {
+  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
+  outline-offset: var(--tds-border-width-base-m);
+  border-radius: var(--tds-border-radius-focus-0-81x);
+}
+
+/* Primary Disabled: fill disabled.default, border transparent */
+.tds-button--primary.tds-button--disabled,
+.tds-button--primary:disabled {
+  background-color: var(--tds-color-element-disabled-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border-color: var(--tds-border-action-transparent-color);
+  cursor: not-allowed;
+}
+
+/* ========== Secondary Variant ========== */
+
+.tds-button--secondary {
+  /* fill: tds.color.element.secondary.default */
+  background-color: var(--tds-color-element-secondary-default);
+  /* label fill: tds.color.element.secondary.onSecondary */
+  color: var(--tds-color-element-secondary-on-secondary);
+  /* border: tds.border.action.brand */
+  border-width: var(--tds-border-action-brand-width);
+  border-style: var(--tds-border-action-brand-style);
+  border-color: var(--tds-border-action-brand-color);
+}
+
+.tds-button--secondary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-secondary-hover);
+}
+
+.tds-button--secondary:active:not(:disabled) {
+  background-color: var(--tds-color-element-secondary-active);
+}
+
+/* Secondary Disabled: fill secondary.default, border action.disabled */
+.tds-button--secondary.tds-button--disabled,
+.tds-button--secondary:disabled {
+  background-color: var(--tds-color-element-secondary-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border-width: var(--tds-border-action-disabled-width);
+  border-style: var(--tds-border-action-disabled-style);
+  border-color: var(--tds-border-action-disabled-color);
+  cursor: not-allowed;
+}
+
+/* ========== Tertiary Variant ========== */
+
+.tds-button--tertiary {
+  /* fill: tds.color.element.tertiary.default */
+  background-color: var(--tds-color-element-tertiary-default);
+  /* label fill: tds.color.element.tertiary.onTertiary */
+  color: var(--tds-color-element-tertiary-on-tertiary);
+  /* border: tds.border.action.transparent */
+  /* For truly invisible border, use border: none instead of transparent color with width */
+  border: none;
+}
+
+.tds-button--tertiary:hover:not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-hover);
+  /* Keep border: none for hover state */
+  border: none;
+}
+
+.tds-button--tertiary:active:not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-active);
+  /* Keep border: none for active state */
+  border: none;
+}
+
+/* Tertiary Disabled: fill tertiary.default, border transparent */
+.tds-button--tertiary.tds-button--disabled,
+.tds-button--tertiary:disabled {
+  background-color: var(--tds-color-element-tertiary-default);
+  color: var(--tds-color-element-disabled-on-disabled);
+  border: none;
+  cursor: not-allowed;
+}
+
+/* ========== Loading State ========== */
+
+.tds-button--loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.tds-button__spinner {
+  display: inline-block;
+  width: var(--tds-spacing-container-1x);
+  height: var(--tds-spacing-container-1x);
+  border: var(--tds-border-width-base-m) solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--tds-border-radius-container-pill);
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tds-button__content {
+  display: inline-flex;
+  align-items: center;
+  /* Gap between icon and label is set per size below */
+}
+
+/* Gap between icon and label per size */
+.tds-button--small .tds-button__content {
+  gap: var(--tds-spacing-container-0-37x);
+}
+
+.tds-button--medium .tds-button__content {
+  gap: var(--tds-spacing-container-0-5x);
+}
+
+.tds-button--large .tds-button__content {
+  gap: var(--tds-spacing-container-0-63x);
+}
+
+.tds-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+
+/* Icon sizing per button size */
+.tds-button--small .tds-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.tds-button--medium .tds-button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.tds-button--large .tds-button__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon positioning */
+.tds-button__icon--left {
+  order: -1;
+}
+
+.tds-button__icon--right {
+  order: 1;
+}
+
+.tds-button--loading .tds-button__content {
+  opacity: 0.7;
+}

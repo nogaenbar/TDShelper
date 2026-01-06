@@ -23,6 +23,13 @@ export function PreviewTab({ component, platform = 'web' }) {
           defaults[prop.name] = '';
         } else if (prop.default === 'undefined') {
           // Skip undefined props
+        } else if (prop.default.startsWith('[') && prop.default.endsWith(']')) {
+          // Try to parse array defaults (simple case)
+          try {
+            defaults[prop.name] = JSON.parse(prop.default);
+          } catch (e) {
+            // If parsing fails, skip
+          }
         } else {
           defaults[prop.name] = prop.default;
         }
@@ -39,6 +46,15 @@ export function PreviewTab({ component, platform = 'web' }) {
         { value: 'web', label: 'Web' },
         { value: 'app', label: 'App' },
       ];
+    }
+    // Set default tabs for TdsTabBar
+    if (component.id === 'tds-tab-bar') {
+      defaults.tabs = [
+        { id: 'tab1', label: 'Tab 1' },
+        { id: 'tab2', label: 'Tab 2' },
+        { id: 'tab3', label: 'Tab 3' },
+      ];
+      defaults.activeTab = 'tab1';
     }
     return defaults;
   });
@@ -95,13 +111,29 @@ export function PreviewTab({ component, platform = 'web' }) {
       return component.renderPreview(mockVariant, propsWithHandler);
     }
     
+    // For TdsTabBar, make it fully interactive
+    if (component.id === 'tds-tab-bar') {
+      const mockVariant = {
+        name: 'Interactive Example',
+        props: {}
+      };
+      // Pass onTabChange handler to update state
+      const propsWithHandler = {
+        ...interactiveProps,
+        onTabChange: (tabId) => {
+          handlePropertyChange('activeTab', tabId);
+        }
+      };
+      return component.renderPreview(mockVariant, propsWithHandler);
+    }
+    
     // For other components, render single interactive example
     const mockVariant = {
       name: 'Interactive Example',
       props: { ...interactiveProps }
     };
     return component.renderPreview(mockVariant, interactiveProps);
-  }, [component, interactiveProps, handlePropertyChange]);
+  }, [component, interactiveProps]);
 
   return (
     <div className="tds-preview-tab" data-node-id="8164:14123">

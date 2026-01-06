@@ -2,6 +2,7 @@ import React from 'react';
 import './MainContent.css';
 import { Tabs } from '../Tabs';
 import { ToggleTabBar } from '../../base/ToggleTabBar';
+import { Playground } from '../../playground/Playground';
 
 /**
  * MainContent Component
@@ -14,7 +15,18 @@ export function MainContent({
   onPlatformChange,
   activeTab = 'preview',
   onTabChange,
+  mode = 'library',
 }) {
+  // Render Playground mode
+  if (mode === 'playground') {
+    return (
+      <main className="tds-main-content">
+        <Playground />
+      </main>
+    );
+  }
+
+  // Render Library mode (existing)
   if (!component) {
     return (
       <main className="tds-main-content">

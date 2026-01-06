@@ -22,7 +22,8 @@ export function TdsTabBar({ tabs = [], activeTab, onTabChange }) {
           id={tab.id}
           label={tab.label}
           isActive={activeTab === tab.id}
-          onClick={() => onTabChange?.(tab.id)}
+          disabled={tab.disabled}
+          onClick={() => !tab.disabled && onTabChange?.(tab.id)}
         />
       ))}
     </nav>

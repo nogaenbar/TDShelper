@@ -1,0 +1,53 @@
+/**
+ * PlaygroundForm Component Styles
+ * Uses ONLY tokens from variables.css
+ */
+
+.tds-playground-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-spacing-container-1x); /* 16px */
+}
+
+.tds-playground-form__title {
+  font-family: var(--tds-typography-title-medium-m-font-family);
+  font-weight: var(--tds-typography-title-medium-m-font-weight);
+  font-size: var(--tds-typography-title-medium-m-font-size);
+  line-height: var(--tds-typography-title-medium-m-line-height);
+  color: var(--tds-color-foreground-default);
+  margin: 0 0 var(--tds-spacing-container-1x) 0; /* 0 0 16px 0 */
+}
+
+.tds-playground-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-spacing-container-1x); /* 16px */
+}
+
+.tds-playground-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-spacing-container-0-5x); /* 8px */
+}
+
+.tds-playground-form__label {
+  font-family: var(--tds-typography-label-semibold-sm-font-family);
+  font-weight: var(--tds-typography-label-semibold-sm-font-weight);
+  font-size: var(--tds-typography-label-semibold-sm-font-size);
+  line-height: var(--tds-typography-label-semibold-sm-line-height);
+  color: var(--tds-color-foreground-default);
+}
+
+.tds-playground-form__value {
+  font-family: var(--tds-typography-body-medium-sm-font-family);
+  font-weight: var(--tds-typography-body-medium-sm-font-weight);
+  font-size: var(--tds-typography-body-medium-sm-font-size);
+  line-height: var(--tds-typography-body-medium-sm-line-height);
+  color: var(--tds-color-foreground-subtle);
+  padding: var(--tds-spacing-container-0-75x); /* 12px */
+  background-color: var(--tds-color-background-surface-medium);
+  border-radius: var(--tds-border-radius-container-0-37x); /* 6px */
+  border: var(--tds-border-width-base-s) solid var(--tds-color-border-subtle);
+  white-space: pre-wrap;
+}
+

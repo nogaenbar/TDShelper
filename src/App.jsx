@@ -4,6 +4,7 @@ import { Sidebar } from './components/layout/Sidebar';
 import { MainContent } from './components/layout/MainContent';
 import { TdsTextButton } from './components/base/TdsTextButton';
 import { ToggleTabBar } from './components/base/ToggleTabBar';
+import { TdsTabBar } from './components/base/TdsTabBar';
 
 /**
  * TDS Helper - Component Workshop
@@ -275,6 +276,106 @@ function App() {
         focusManagement: 'Visible focus indicators',
       },
     },
+    {
+      id: 'tds-tab-bar',
+      name: 'TdsTabBar',
+      category: 'base',
+      description: 'Horizontal tab navigation component with Tab subcomponents for organizing content',
+      platform: 'web',
+      variants: [
+        { name: 'Default - Tab 1 Selected', props: { activeTab: 'tab1' } },
+        { name: 'Default - Tab 2 Selected', props: { activeTab: 'tab2' } },
+        { name: 'Default - Tab 3 Selected', props: { activeTab: 'tab3' } },
+        { name: 'With 2 Tabs', props: { activeTab: 'tab1', tabCount: 2 } },
+        { name: 'With 4 Tabs', props: { activeTab: 'tab1', tabCount: 4 } },
+        { name: 'With Disabled Tab', props: { activeTab: 'tab1', hasDisabled: true } },
+      ],
+      properties: [
+        {
+          name: 'tabs',
+          type: 'Array<{ id: string; label: string; disabled?: boolean }>',
+          default: '[{ id: "tab1", label: "Tab 1" }, { id: "tab2", label: "Tab 2" }, { id: "tab3", label: "Tab 3" }]',
+          description: 'Array of tab objects with id and label',
+        },
+        {
+          name: 'activeTab',
+          type: 'string',
+          default: 'undefined',
+          description: 'The currently active tab ID',
+        },
+        {
+          name: 'onTabChange',
+          type: '(tabId: string) => void',
+          default: 'undefined',
+          description: 'Callback function called when a tab is clicked',
+        },
+      ],
+      renderPreview: (variant, interactiveProps = {}) => {
+        // Default tabs
+        const defaultTabs = [
+          { id: 'tab1', label: 'Tab 1' },
+          { id: 'tab2', label: 'Tab 2' },
+          { id: 'tab3', label: 'Tab 3' },
+        ];
+        
+        // Use interactiveProps if available, otherwise use variant props
+        const tabs = interactiveProps.tabs || (() => {
+          const tabCount = variant.props?.tabCount || 3;
+          if (tabCount === 2) {
+            return [
+              { id: 'tab1', label: 'Tab 1' },
+              { id: 'tab2', label: 'Tab 2' },
+            ];
+          } else if (tabCount === 4) {
+            return [
+              { id: 'tab1', label: 'Tab 1' },
+              { id: 'tab2', label: 'Tab 2' },
+              { id: 'tab3', label: 'Tab 3' },
+              { id: 'tab4', label: 'Tab 4' },
+            ];
+          }
+          return defaultTabs;
+        })();
+        
+        // Handle disabled tab
+        if (variant.props?.hasDisabled || interactiveProps.tabs?.some(t => t.disabled)) {
+          tabs[1] = { ...tabs[1], disabled: true };
+        }
+        
+        const activeTab = interactiveProps.activeTab !== undefined
+          ? interactiveProps.activeTab
+          : (variant.props?.activeTab || tabs[0].id);
+        
+        const onTabChange = interactiveProps.onTabChange || (() => {});
+        
+        // For interactive example, make it fully interactive
+        if (variant.name === 'Interactive Example' || !variant.props) {
+          return (
+            <TdsTabBar
+              tabs={tabs}
+              activeTab={activeTab}
+              onTabChange={onTabChange}
+            />
+          );
+        }
+        
+        // For variant previews, render static
+        return (
+          <TdsTabBar
+            tabs={tabs}
+            activeTab={activeTab}
+            onTabChange={() => {}}
+          />
+        );
+      },
+      accessibility: {
+        ariaLabel: 'TdsTabBar component with proper ARIA attributes',
+        keyboardNavigation: 'Fully keyboard accessible with Arrow keys and Enter',
+        screenReaderSupport: 'Properly announced with role="tablist" and role="tab"',
+        colorContrast: 'Meets WCAG AA standards',
+        focusManagement: 'Visible focus indicators with rounded corners',
+      },
+    },
   ];
 
   // Pattern Components: Higher-level, opinionated assemblies
@@ -289,6 +390,7 @@ function App() {
   const [selectedComponent, setSelectedComponent] = useState(components[0]);
   const [platform, setPlatform] = useState('web');
   const [activeTab, setActiveTab] = useState('preview');
+  const [mode, setMode] = useState('library');
 
   const handleSelectComponent = (component) => {
     setSelectedComponent(component);
@@ -307,6 +409,8 @@ function App() {
         selectedComponent={selectedComponent}
         onSelectComponent={handleSelectComponent}
         onNewComponent={handleNewComponent}
+        mode={mode}
+        onModeChange={setMode}
       />
       <MainContent
         component={selectedComponent}
@@ -314,6 +418,7 @@ function App() {
         onPlatformChange={setPlatform}
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        mode={mode}
       />
     </div>
   );

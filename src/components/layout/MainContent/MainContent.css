@@ -62,3 +62,21 @@
   overflow: hidden;
 }
 
+/* Empty state */
+.tds-main-content__empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tds-spacing-container-2x);
+}
+
+.tds-main-content__empty p {
+  font-family: var(--tds-typography-body-medium-sm-font-family);
+  font-weight: var(--tds-typography-body-medium-sm-font-weight);
+  font-size: var(--tds-typography-body-medium-sm-font-size);
+  line-height: var(--tds-typography-body-medium-sm-line-height);
+  color: var(--tds-color-foreground-subtle);
+  margin: 0;
+}
+

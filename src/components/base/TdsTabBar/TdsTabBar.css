@@ -1,12 +1,11 @@
 /**
  * TdsTabBar Component Styles
- * PIXEL-PERFECT from Figma design 8164:14122
+ * PIXEL-PERFECT from Figma design
  * 
- * Width: 375px
- * Height: 48px per tab
- * Font: 14px semi-bold
- * Active: #D2000F text with #F23B44 bottom indicator
- * Inactive: #333 text
+ * Semantic Token Logic:
+ * - Unselected tabs: tertiary tokens (default interactive elements)
+ * - Selected tabs: selectedNeutral tokens (selected elements)
+ * - Borders: border.action.* composite tokens
  */
 
 .tds-tab-bar {
@@ -14,6 +13,18 @@
   align-items: flex-start;
   position: relative;
   height: var(--tds-dimension-element-height-3x); /* 48px */
+}
+
+/* Container bottom border - subtle gray line */
+.tds-tab-bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--tds-border-action-subtle-width); /* 1px */
+  background-color: var(--tds-border-action-subtle-color); /* #33333329 */
+  z-index: 0;
 }
 
 .tds-tab-bar__tab {
@@ -25,11 +36,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: var(--tds-color-element-tertiary-default); /* transparent */
   border: none;
   cursor: pointer;
   position: relative;
-  transition: color 0.2s ease-in-out;
+  z-index: 1;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .tds-tab-bar__tab-text {
@@ -37,29 +49,57 @@
   font-weight: var(--tds-typography-label-semibold-s-font-weight);
   font-size: var(--tds-typography-label-semibold-s-font-size);
   line-height: var(--tds-typography-label-semibold-s-line-height);
-  color: var(--tds-color-foreground-default); /* #333 */
+  color: var(--tds-color-element-tertiary-on-tertiary); /* #333333 */
   text-align: center;
   white-space: nowrap;
   margin: 0;
 }
 
-/* Active tab text: red */
-.tds-tab-bar__tab--active .tds-tab-bar__tab-text {
-  color: var(--tds-color-foreground-brand); /* #D2000F */
+/* Unselected tab states: tertiary tokens */
+.tds-tab-bar__tab:hover:not(.tds-tab-bar__tab--active):not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-hover); /* rgba(143,143,143,0.12) */
 }
 
-/* Active indicator: 2px red line at bottom */
+.tds-tab-bar__tab:active:not(.tds-tab-bar__tab--active):not(:disabled) {
+  background-color: var(--tds-color-element-tertiary-active); /* rgba(143,143,143,0.24) */
+}
+
+/* Selected tab: selectedNeutral tokens (static, no hover/active) */
+.tds-tab-bar__tab--active {
+  background-color: var(--tds-color-element-selected-neutral-default); /* transparent */
+}
+
+.tds-tab-bar__tab--active .tds-tab-bar__tab-text {
+  color: var(--tds-color-element-selected-neutral-on-selected-neutral); /* #d2000f */
+}
+
+/* Selected indicator: border.action.selected composite token */
 .tds-tab-bar__tab-indicator {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--tds-border-width-base-m); /* 2px */
-  background-color: var(--tds-color-foreground-brandAccent); /* #F23B44 */
+  height: var(--tds-border-action-selected-width); /* 2px */
+  background-color: var(--tds-border-action-selected-color); /* #d2000f */
+  z-index: 2;
 }
 
+/* Disabled state */
+.tds-tab-bar__tab:disabled,
+.tds-tab-bar__tab--disabled {
+  background-color: var(--tds-color-element-tertiary-default); /* transparent */
+  cursor: not-allowed;
+}
+
+.tds-tab-bar__tab:disabled .tds-tab-bar__tab-text,
+.tds-tab-bar__tab--disabled .tds-tab-bar__tab-text {
+  color: var(--tds-color-element-disabled-on-disabled); /* #8f8f8f */
+}
+
+/* Focus state */
 .tds-tab-bar__tab:focus-visible {
-  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus);
-  outline-offset: var(--tds-border-width-base-m);
+  outline: var(--tds-border-width-base-m) solid var(--tds-color-border-focus); /* #0099ff */
+  outline-offset: var(--tds-border-width-base-m); /* 2px */
+  border-radius: var(--tds-border-radius-focus-0-44x); /* 7px */
 }
 

@@ -12,7 +12,9 @@ export function Sidebar({
   components = [],
   selectedComponent,
   onSelectComponent,
-  onNewComponent 
+  onNewComponent,
+  mode = 'library',
+  onModeChange
 }) {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -29,6 +31,27 @@ export function Sidebar({
           <p className="tds-sidebar__description" data-node-id="8164:14096">
             Build production-ready components for TDS design system
           </p>
+        </div>
+        {/* Mode Toggle */}
+        <div className="tds-sidebar__mode-toggle">
+          <button
+            className={`tds-sidebar__mode-button ${
+              mode === 'library' ? 'tds-sidebar__mode-button--active' : ''
+            }`}
+            onClick={() => onModeChange?.('library')}
+            aria-pressed={mode === 'library'}
+          >
+            Library
+          </button>
+          <button
+            className={`tds-sidebar__mode-button ${
+              mode === 'playground' ? 'tds-sidebar__mode-button--active' : ''
+            }`}
+            onClick={() => onModeChange?.('playground')}
+            aria-pressed={mode === 'playground'}
+          >
+            Playground
+          </button>
         </div>
       </div>
 
